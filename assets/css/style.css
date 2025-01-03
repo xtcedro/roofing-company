@@ -231,6 +231,21 @@ html {
     color: #FFD700; /* Bright gold text for emphasis */
 }
 
+.hero-quote {
+    font-style: italic; /* Italicize the text for emphasis */
+    font-size: 1.2rem; /* Adjust the font size for readability */
+    color: #FFD700; /* Gold color to align with the roofing company's theme */
+    margin: 1.5rem auto; /* Add spacing and center the quote */
+    padding: 1rem; /* Add padding for better readability */
+    border-left: 4px solid #FFAA00; /* Add a gold border on the left for a polished look */
+    background-color: #002855; /* Dark blue background to match the theme */
+    max-width: 800px; /* Restrict width for a cleaner appearance */
+    line-height: 1.6; /* Improve line spacing for readability */
+    text-align: center; /* Center-align the text */
+    border-radius: 5px; /* Slightly round the corners for a modern look */
+}
+
+
 
 /* Navigation Bar */
 nav {

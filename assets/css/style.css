@@ -843,6 +843,115 @@ footer {
     transform: scale(1.05); /* Slight zoom effect */
 }
 
+/* Gallery Section */
+.gallery-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #002855; /* Dark blue for the background */
+    color: #FFD700; /* Gold for text */
+}
+
+.gallery-section h2 {
+    font-size: 2rem; /* Larger font size for headings */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FFAA00; /* Bright gold for emphasis */
+    text-transform: uppercase; /* For a professional look */
+    letter-spacing: 1px;
+}
+
+.gallery-section p {
+    font-size: 1.2rem; /* Slightly larger for better readability */
+    color: #FFD700; /* Gold for consistency */
+    margin-bottom: 2rem; /* Add spacing below paragraph */
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Gallery Item */
+.gallery-item {
+    width: 300px;
+    text-align: center;
+    border: 2px solid #FFAA00; /* Bright gold for borders */
+    border-radius: 8px;
+    background: #001f3f; /* Darker blue background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Gallery Item Image */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #FFAA00; /* Gold divider below image */
+}
+
+/* Gallery Item Text */
+.gallery-item p {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #FFD700; /* Gold for text */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem; /* Larger size for emphasis */
+    font-weight: bold;
+    color: #FFAA00; /* Bright gold for headings */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase; /* Professional uppercase styling */
+    letter-spacing: 1.2px; /* Adds spacing between letters for readability */
+}
+
+/* Section Intro */
+.section-intro {
+    font-size: 1.2rem; /* Slightly larger for better readability */
+    color: #FFD700; /* Gold for complementary contrast */
+    margin-bottom: 2rem; /* Adds spacing below paragraph */
+    line-height: 1.6; /* Improves readability */
+    max-width: 800px; /* Keeps text in a readable width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Overall Section Styles */
+.offers-section-alt {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #001f3f; /* Dark blue for background */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.offers-section-alt h1,
+.offers-section-alt h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FFAA00; /* Bright gold for headings */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Adds spacing for readability */
+}
+
+.offers-section-alt p {
+    font-size: 1rem;
+    color: #FFD700; /* Gold text for consistency */
+    margin-bottom: 1rem;
+    line-height: 1.5; /* Improves readability */
+}
+
 /* Hover Effect for Secondary Button */
 .cta-button.secondary:hover {
     background-color: #FFD700; /* Gold background for secondary button */

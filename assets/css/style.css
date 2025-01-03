@@ -56,6 +56,55 @@ html {
  overflow-x: hidden;
 }
 
+/* Call to Action Section */
+.call-to-action-section {
+    background: linear-gradient(135deg, #001f3f, #003366); /* Dark blue gradient */
+    color: #fff; /* White text for contrast */
+    padding: 3rem 2rem; /* Generous padding for spacing */
+    text-align: center; /* Center-align content */
+    border-top: 4px solid #FFD700; /* Gold border */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    margin: 2rem auto; /* Center the section and add vertical spacing */
+    max-width: 900px; /* Limit the width for readability */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+.call-to-action-section h2 {
+    font-size: 2.5rem; /* Larger font for heading */
+    margin-bottom: 1.5rem; /* Spacing below heading */
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+}
+
+.call-to-action-section p {
+    font-size: 1.2rem; /* Readable font size for paragraph */
+    margin-bottom: 1.5rem; /* Spacing below paragraph */
+    line-height: 1.8; /* Improve readability with line spacing */
+    color: #D0D3D4; /* Light gray text */
+}
+
+.call-to-action-section strong {
+    color: #FFD700; /* Gold for emphasis */
+}
+
+.call-to-action-section .cta-button {
+    background-color: #FFD700; /* Gold button */
+    color: #001f3f; /* Dark blue text for contrast */
+    padding: 0.75rem 2rem; /* Padding for clickable area */
+    font-size: 1rem; /* Standard button text size */
+    font-weight: bold; /* Emphasize the text */
+    text-transform: uppercase; /* Make text uppercase for style */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
+
+.call-to-action-section .cta-button:hover {
+    background-color: #D4AF37; /* Slightly darker gold on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
 /* Language Modal */
 .modal {
     display: flex;

@@ -244,6 +244,7 @@ html {
     height: 100%;
     background: rgba(0, 45, 80, 0.6); /* Blue overlay */
     z-index: 1;
+    pointer-events: none; /* Allow clicks to pass through */
 }
 
 .hero-section h1, .hero-section p {

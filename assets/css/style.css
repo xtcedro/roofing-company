@@ -232,22 +232,6 @@ html {
 }
 
 
-.cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #E8B21F; /* Gold button */
-    color: #002D50;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: #D4AF37;
-    transform: scale(1.05);
-}
-
 /* Navigation Bar */
 nav {
     background-color: #002D50; /* Dark steel blue for nav background */

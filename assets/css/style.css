@@ -329,6 +329,36 @@ nav a:hover {
     transform: scale(1.05); /* Subtle zoom effect */
 }
 
+.cta-button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #FFD700; /* Gold button */
+    color: #001f3f; /* Dark blue text */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded edges for a modern look */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    font-size: 1rem; /* Consistent font size */
+    text-transform: uppercase; /* All caps for emphasis */
+}
+
+.cta-button.secondary {
+    background-color: #FFFFFF; /* White button for secondary action */
+    color: #001f3f; /* Dark blue text */
+    border: 2px solid #FFD700; /* Gold border */
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #D4AF37; /* Lighter gold on hover */
+    color: #FFFFFF; /* White text on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+
 /* Input Fields */
 form input[type="text"],
 form input[type="email"],

@@ -358,6 +358,12 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
+/* Hover Effect for Secondary Button */
+.cta-button.secondary:hover {
+    background-color: #FFD700; /* Gold background for secondary button */
+    color: #003B6F; /* Dark blue text on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
 
 /* Input Fields */
 form input[type="text"],
@@ -950,11 +956,4 @@ footer {
     color: #FFD700; /* Gold text for consistency */
     margin-bottom: 1rem;
     line-height: 1.5; /* Improves readability */
-}
-
-/* Hover Effect for Secondary Button */
-.cta-button.secondary:hover {
-    background-color: #FFD700; /* Gold background for secondary button */
-    color: #003B6F; /* Dark blue text on hover */
-    transform: scale(1.05); /* Slight zoom effect */
 }

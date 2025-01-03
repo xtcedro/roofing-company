@@ -18,6 +18,19 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+/* Header Titles */
+.header-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 /* Adjusted .title-banner Styling */
 .title-banner {
   width: 100vw;

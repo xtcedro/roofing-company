@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vea todas las citas reservadas con Heavenly Roofing, sus expertos confiables en techos en Oklahoma City.">
+    <title>Ver Citas - Heavenly Roofing</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        async function fetchAppointments() {
+            try {
+                const response = await fetch('/api/appointments');
+                const appointments = await response.json();
+
+                if (response.ok) {
+                    const appointmentsContainer = document.getElementById('appointments-container');
+
+                    if (appointments.length === 0) {
+                        appointmentsContainer.innerHTML = '<p class="no-appointments">No se encontraron citas. 📅</p>';
+                        return;
+                    }
+
+                    appointments.forEach((appointment) => {
+                        const appointmentCard = document.createElement('div');
+                        appointmentCard.className = 'appointment-card';
+
+                        appointmentCard.innerHTML = `
+                            <h3>👤 ${appointment.name}</h3>
+                            <p><strong>📧 Correo Electrónico:</strong> ${appointment.email}</p>
+                            <p><strong>📞 Teléfono:</strong> ${appointment.phone}</p>
+                            <p><strong>📅 Fecha:</strong> ${appointment.date}</p>
+                            <p><strong>🛠️ Servicio:</strong> ${appointment.service}</p>
+                            <p><strong>💬 Detalles:</strong> ${appointment.message || 'No se proporcionaron detalles adicionales.'}</p>
+                        `;
+
+                        appointmentsContainer.appendChild(appointmentCard);
+                    });
+                } else {
+                    alert(`Error al obtener las citas: ${appointments.error || 'Error desconocido'}`);
+                }
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchAppointments);
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
+        <div class="title-banner">
+            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Expertos en Techos de Confianza en Oklahoma City">
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index_es.html">🏠 Inicio</a>
+        <a href="about_es.html">📖 Sobre Nosotros</a>
+        <a href="services_es.html">🛠️ Servicios</a>
+        <a href="gallery_es.html">🖼️ Galería</a>
+        <a href="projects_es.html">🚧 Proyectos</a>
+        <a href="appointments_es.html">📅 Enviar Citas</a>
+        <a href="view-appointments_es.html" class="active">👀 Ver Citas</a>
+        <a href="contact_es.html">📬 Contáctenos</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">👀 Ver Citas 🌟</h1>
+        <blockquote class="hero-quote">
+            💡 <em>"Gestión sencilla para sus necesidades de techos."</em> 🏡
+        </blockquote>
+    </section>
+
+    <!-- Appointments Section -->
+    <section class="appointments-section">
+        <h2 class="section-title">📅 Todas las Citas Programadas 🚀</h2>
+        <div id="appointments-container" class="appointments-container">
+            <p>Cargando citas... ⏳</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Heavenly Roofing. 🌟 Hecho con ❤️ en Oklahoma City. Todos los derechos reservados.</p>
+        <nav class="legal-links">
+            <a href="legal/terms_es.html">📝 Términos y Condiciones</a>
+            <a href="legal/privacy_es.html">🔒 Política de Privacidad</a>
+            <a href="legal/disclaimer_es.html">⚠️ Aviso Legal</a>
+            <a href="legal/warranty_es.html">📜 Política de Garantía</a>
+            <a href="legal/refund_es.html">💵 Política de Reembolso</a>
+            <a href="legal/accessibility_es.html">♿ Declaración de Accesibilidad</a>
+            <a href="legal/cookies_es.html">🍪 Política de Cookies</a>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -407,3 +407,172 @@ html {
     text-transform: uppercase;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
 }
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Deeper shadow for prominence */
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent background for gradient text */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Enhance readability */
+}
+
+.why-choose-us p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: #D0D3D4; /* Light gray for better readability */
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.why-choose-us ul li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+    color: #FFFFFF; /* White text */
+    font-weight: bold;
+}
+
+.why-choose-us ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #FFD700; /* Gold color */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0; /* Align icon to the left of the text */
+    top: 0;
+}
+
+.why-choose-us blockquote {
+    font-style: italic;
+    background-color: #1C1C1C; /* Dark gray background */
+    color: #FFD700; /* Gold text */
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-left: 5px solid #FF0000; /* Red border on the left */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.why-choose-us .cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #FFD700; /* Gold button */
+    color: #000000; /* Black text */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.why-choose-us .cta-button:hover {
+    background-color: #FFCC33; /* Lighter gold on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Language Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Prevents scrolling when the modal is open */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #000000; /* Pure black background */
+    color: #FFFFFF; /* White text */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    max-width: 400px;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+/* Modal Title */
+.modal-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Language Options */
+.language-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Language Buttons */
+.language-options button {
+    background-color: #1C1C1C; /* Dark gray for buttons */
+    color: #FFD700; /* Gold text */
+    padding: 1rem 1.5rem;
+    border: 2px solid #FF0000; /* Red border */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between text and flag */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover Effect for Buttons */
+.language-options button:hover {
+    background-color: #FFD700; /* Gold hover effect */
+    color: #000000; /* Black text on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Flag Icon */
+.flag-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
+    border: 2px solid #FFD700; /* Gold border around flag */
+}

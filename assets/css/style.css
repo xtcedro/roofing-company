@@ -576,3 +576,56 @@ html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
     border: 2px solid #FFD700; /* Gold border around flag */
 }
+
+/* Legal Links */
+.legal-links {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers items */
+    gap: 1.5rem; /* Adds spacing between items */
+    font-size: 1rem; /* Sets text size to be consistent with the theme */
+    color: #FFD700; /* Gold text color for items */
+    border-top: 2px solid #FF0000; /* Red border at the top for separation */
+}
+
+.legal-links li {
+    display: inline; /* Ensures list items are inline */
+}
+
+.legal-links a {
+    text-decoration: none; /* Removes underline */
+    color: #FFD700; /* Gold text for links */
+    font-weight: bold; /* Makes links bold */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.legal-links a:hover {
+    color: #FF0000; /* Red text color on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black background */
+    color: #FFD700; /* Gold text for footer */
+    text-align: center; /* Centers text */
+    padding: 1.5rem; /* Adds padding for spacing */
+    margin-top: 2rem; /* Adds margin at the top */
+    border-top: 4px solid #FF0000; /* Red border on top */
+    box-shadow: 0 -4px 15px rgba(255, 0, 0, 0.5); /* Subtle red shadow above */
+    font-size: 0.9rem; /* Slightly smaller font for footer text */
+}
+
+/* Footer Hover Effect */
+footer a {
+    color: #FFD700; /* Gold text for footer links */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    color: #FF0000; /* Red text on hover */
+    text-decoration: underline; /* Underline on hover */
+}

@@ -6,6 +6,42 @@
     <meta name="description" content="Book your appointment with Heavenly Roofing - Your trusted roofing experts in Oklahoma City.">
     <title>Appointments - Heavenly Roofing</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/appointments.css">
+    <script>
+        async function submitAppointment(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+            };
+
+            try {
+                const response = await fetch('/api/appointments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Appointment request submitted successfully! ✅');
+                    document.getElementById('appointment-form').reset();
+                } else {
+                    alert(`Error: ${result.error || 'Failed to submit appointment.'}`);
+                }
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- Header Section -->
@@ -39,10 +75,10 @@
     <section class="appointment-form-section">
         <h2 class="section-title">Schedule Your Appointment 🚀</h2>
         <p class="section-description">
-            Please fill out the form below to request an appointment with Heavenly Roofing.
+            Please fill out the form below to request an appointment with Heavenly Roofing. 
             We’ll get back to you as soon as possible! 🛠️✨
         </p>
-        <form id="appointment-form" class="appointment-form" action="/submit-appointment" method="POST">
+        <form id="appointment-form" class="appointment-form" onsubmit="submitAppointment(event)">
             <div class="form-group">
                 <label for="name">👤 Full Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your full name">

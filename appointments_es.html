@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tu cita con Heavenly Roofing - Tus expertos confiables en techos en Oklahoma City.">
+    <title>Citas - Heavenly Roofing</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/appointments.css">
+</head>
+<body>
+    <!-- Sección de Encabezado -->
+    <header>
+        <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
+        <div class="title-banner">
+            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Los expertos confiables en techos de Oklahoma City">
+        </div>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <a href="index_es.html">🏠 Inicio</a>
+        <a href="about_es.html">📖 Sobre Nosotros</a>
+        <a href="services_es.html">🛠️ Servicios</a>
+        <a href="gallery_es.html">🖼️ Galería</a>
+        <a href="projects_es.html">🚧 Proyectos</a>
+        <a href="appointments_es.html" class="active">📅 Citas</a>
+        <a href="contact_es.html">📬 Contáctanos</a>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-section">
+        <h1 class="hero-title">📅 Reserva Tu Cita 🌟</h1>
+        <blockquote class="hero-quote">
+            💡 <em>"¡Programación sin esfuerzo, adaptada a tus necesidades de techado!"</em> 🏡
+        </blockquote>
+    </section>
+
+    <!-- Sección del Formulario de Citas -->
+    <section class="appointment-form-section">
+        <h2 class="section-title">Programa Tu Cita 🚀</h2>
+        <p class="section-description">
+            Por favor, completa el formulario a continuación para solicitar una cita con Heavenly Roofing. 
+            ¡Nos pondremos en contacto contigo lo antes posible! 🛠️✨
+        </p>
+        <form id="appointment-form" class="appointment-form" action="/submit-appointment" method="POST">
+            <div class="form-group">
+                <label for="name">👤 Nombre Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Introduce tu nombre completo">
+            </div>
+            <div class="form-group">
+                <label for="email">📧 Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Introduce tu correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="phone">📞 Número de Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Introduce tu número de teléfono">
+            </div>
+            <div class="form-group">
+                <label for="date">📅 Fecha Preferida:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="service">🛠️ Tipo de Servicio:</label>
+                <select id="service" name="service" required>
+                    <option value="roof-repair">Reparación de Techo</option>
+                    <option value="roof-replacement">Reemplazo de Techo</option>
+                    <option value="inspection">Inspección</option>
+                    <option value="painting">Pintura</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">💬 Detalles Adicionales:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Introduce cualquier detalle adicional..."></textarea>
+            </div>
+            <button type="submit" class="cta-button">Enviar Solicitud ✅</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Heavenly Roofing. 🌟 Creado con ❤️ en Oklahoma City. Todos los derechos reservados.</p>
+        <nav class="legal-links">
+            <a href="legal_es/terms.html">📝 Términos y Condiciones</a>
+            <a href="legal_es/privacy.html">🔒 Política de Privacidad</a>
+            <a href="legal_es/disclaimer.html">⚠️ Descargo de Responsabilidad</a>
+            <a href="legal_es/warranty.html">📜 Política de Garantía</a>
+            <a href="legal_es/refund.html">💵 Política de Reembolsos</a>
+            <a href="legal_es/accessibility.html">♿ Declaración de Accesibilidad</a>
+            <a href="legal_es/cookies.html">🍪 Política de Cookies</a>
+        </nav>
+    </footer>
+</body>
+</html>

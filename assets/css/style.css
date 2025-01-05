@@ -577,6 +577,92 @@ html {
     border: 2px solid #FFD700; /* Gold border around flag */
 }
 
+/* Appointment Form Section */
+.appointment-form-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFD700; /* Gold text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px; /* Smooth corners */
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+}
+
+.appointment-form-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.appointment-form-section .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.appointment-form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.appointment-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.appointment-form .form-group label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #FFD700; /* Gold text */
+}
+
+.appointment-form .form-group input,
+.appointment-form .form-group select,
+.appointment-form .form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #000000; /* Black text */
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form .form-group input:focus,
+.appointment-form .form-group select:focus,
+.appointment-form .form-group textarea:focus {
+    outline: none;
+    border-color: #FFD700; /* Gold focus border */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8); /* Gold glow */
+}
+
+.appointment-form .cta-button {
+    padding: 0.75rem 2rem;
+    background-color: #FFD700; /* Gold button */
+    color: #000000; /* Black text */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.appointment-form .cta-button:hover {
+    background-color: #FFCC33; /* Lighter gold on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
 /* Legal Links */
 .legal-links {
     list-style-type: none; /* Removes default bullet points */

@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reserva tu cita con Heavenly Roofing - Tus expertos confiables en techos en Oklahoma City.">
+    <meta name="description" content="Reserve su cita con Heavenly Roofing - Sus expertos confiables en techos en Oklahoma City.">
     <title>Citas - Heavenly Roofing</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/appointments.css">
+    <script>
+        async function submitAppointment(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+            };
+
+            try {
+                const response = await fetch('/api/appointments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('¡Solicitud de cita enviada con éxito! ✅');
+                    document.getElementById('appointment-form').reset();
+                } else {
+                    alert(`Error: ${result.error || 'No se pudo enviar la solicitud.'}`);
+                }
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- Sección de Encabezado -->
@@ -19,42 +54,42 @@
 
     <!-- Barra de Navegación -->
     <nav class="navbar">
-        <a href="index_es.html">🏠 Inicio</a>
-        <a href="about_es.html">📖 Sobre Nosotros</a>
-        <a href="services_es.html">🛠️ Servicios</a>
-        <a href="gallery_es.html">🖼️ Galería</a>
-        <a href="projects_es.html">🚧 Proyectos</a>
-        <a href="appointments_es.html" class="active">📅 Citas</a>
-        <a href="contact_es.html">📬 Contáctanos</a>
+        <a href="index.html">🏠 Inicio</a>
+        <a href="about.html">📖 Sobre Nosotros</a>
+        <a href="services.html">🛠️ Servicios</a>
+        <a href="gallery.html">🖼️ Galería</a>
+        <a href="projects.html">🚧 Proyectos</a>
+        <a href="appointments.html" class="active">📅 Citas</a>
+        <a href="contact.html">📬 Contáctenos</a>
     </nav>
 
-    <!-- Sección Hero -->
+    <!-- Sección Principal -->
     <section class="hero-section">
-        <h1 class="hero-title">📅 Reserva Tu Cita 🌟</h1>
+        <h1 class="hero-title">📅 Reserve Su Cita 🌟</h1>
         <blockquote class="hero-quote">
-            💡 <em>"¡Programación sin esfuerzo, adaptada a tus necesidades de techado!"</em> 🏡
+            💡 <em>"Agendar nunca fue tan fácil, adaptado a sus necesidades de techado."</em> 🏡
         </blockquote>
     </section>
 
     <!-- Sección del Formulario de Citas -->
     <section class="appointment-form-section">
-        <h2 class="section-title">Programa Tu Cita 🚀</h2>
+        <h2 class="section-title">Agende Su Cita 🚀</h2>
         <p class="section-description">
-            Por favor, completa el formulario a continuación para solicitar una cita con Heavenly Roofing. 
-            ¡Nos pondremos en contacto contigo lo antes posible! 🛠️✨
+            Complete el formulario a continuación para solicitar una cita con Heavenly Roofing.
+            ¡Nos pondremos en contacto con usted lo antes posible! 🛠️✨
         </p>
-        <form id="appointment-form" class="appointment-form" action="/submit-appointment" method="POST">
+        <form id="appointment-form" class="appointment-form" onsubmit="submitAppointment(event)">
             <div class="form-group">
                 <label for="name">👤 Nombre Completo:</label>
-                <input type="text" id="name" name="name" required placeholder="Introduce tu nombre completo">
+                <input type="text" id="name" name="name" required placeholder="Ingrese su nombre completo">
             </div>
             <div class="form-group">
                 <label for="email">📧 Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="Introduce tu correo electrónico">
+                <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico">
             </div>
             <div class="form-group">
-                <label for="phone">📞 Número de Teléfono:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Introduce tu número de teléfono">
+                <label for="phone">📞 Número Telefónico:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Ingrese su número telefónico">
             </div>
             <div class="form-group">
                 <label for="date">📅 Fecha Preferida:</label>
@@ -63,15 +98,15 @@
             <div class="form-group">
                 <label for="service">🛠️ Tipo de Servicio:</label>
                 <select id="service" name="service" required>
-                    <option value="roof-repair">Reparación de Techo</option>
-                    <option value="roof-replacement">Reemplazo de Techo</option>
+                    <option value="roof-repair">Reparación de Techos</option>
+                    <option value="roof-replacement">Reemplazo de Techos</option>
                     <option value="inspection">Inspección</option>
                     <option value="painting">Pintura</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="message">💬 Detalles Adicionales:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Introduce cualquier detalle adicional..."></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Ingrese detalles adicionales..."></textarea>
             </div>
             <button type="submit" class="cta-button">Enviar Solicitud ✅</button>
         </form>
@@ -85,7 +120,7 @@
             <a href="legal_es/privacy.html">🔒 Política de Privacidad</a>
             <a href="legal_es/disclaimer.html">⚠️ Descargo de Responsabilidad</a>
             <a href="legal_es/warranty.html">📜 Política de Garantía</a>
-            <a href="legal_es/refund.html">💵 Política de Reembolsos</a>
+            <a href="legal_es/refund.html">💵 Política de Reembolso</a>
             <a href="legal_es/accessibility.html">♿ Declaración de Accesibilidad</a>
             <a href="legal_es/cookies.html">🍪 Política de Cookies</a>
         </nav>

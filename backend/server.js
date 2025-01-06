@@ -9,8 +9,6 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const appointmentsRoutes = require('./routes/appointments');
-app.use('/api/appointments', appointmentsRoutes);
 
 // Middleware
 app.use(bodyParser.json());

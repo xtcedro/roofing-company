@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reserve su cita con Heavenly Roofing - Sus expertos confiables en techos en Oklahoma City.">
+    <meta name="description" content="Agenda tu cita con Heavenly Roofing - Tus expertos de confianza en techos en la ciudad de Oklahoma.">
     <title>Citas - Heavenly Roofing</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/appointments.css">
@@ -21,7 +21,7 @@
             };
 
             try {
-                const response = await fetch('/api/appointments', {
+                const response = await fetch('http://www.domingueztechsolutions.com:3000/api/appointments', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -32,10 +32,10 @@
                 const result = await response.json();
 
                 if (response.ok) {
-                    alert('¡Solicitud de cita enviada con éxito! ✅');
+                    alert('¡Solicitud de cita enviada exitosamente! ✅');
                     document.getElementById('appointment-form').reset();
                 } else {
-                    alert(`Error: ${result.error || 'No se pudo enviar la solicitud.'}`);
+                    alert(`Error: ${result.error || 'No se pudo enviar la solicitud de cita.'}`);
                 }
             } catch (error) {
                 alert(`Error: ${error.message}`);
@@ -48,7 +48,7 @@
     <header>
         <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
         <div class="title-banner">
-            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Los expertos confiables en techos de Oklahoma City">
+            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Expertos de confianza en techos en la ciudad de Oklahoma">
         </div>
     </header>
 
@@ -59,38 +59,38 @@
         <a href="services_es.html">🛠️ Servicios</a>
         <a href="gallery_es.html">🖼️ Galería</a>
         <a href="projects_es.html">🚧 Proyectos</a>
-        <a href="appointments_es.html" class="active">📅 Solicitar Citas</a>
+        <a href="appointments_es.html" class="active">📅 Enviar Cita</a>
         <a href="view-appointments_es.html">👀 Ver Citas</a>
         <a href="contact_es.html">📬 Contáctanos</a>
     </nav>
 
-    <!-- Sección Principal -->
+    <!-- Sección de Héroe -->
     <section class="hero-section">
-        <h1 class="hero-title">📅 Reserve Su Cita 🌟</h1>
+        <h1 class="hero-title">📅 Reserva Tu Cita 🌟</h1>
         <blockquote class="hero-quote">
-            💡 <em>"Agendar nunca fue tan fácil, adaptado a sus necesidades de techado."</em> 🏡
+            💡 <em>"¡Programación sencilla, adaptada a tus necesidades de techado!"</em> 🏡
         </blockquote>
     </section>
 
     <!-- Sección del Formulario de Citas -->
     <section class="appointment-form-section">
-        <h2 class="section-title">Agende Su Cita 🚀</h2>
+        <h2 class="section-title">Agenda Tu Cita 🚀</h2>
         <p class="section-description">
-            Complete el formulario a continuación para solicitar una cita con Heavenly Roofing.
-            ¡Nos pondremos en contacto con usted lo antes posible! 🛠️✨
+            Por favor, completa el formulario a continuación para solicitar una cita con Heavenly Roofing. 
+            ¡Nos pondremos en contacto contigo lo antes posible! 🛠️✨
         </p>
         <form id="appointment-form" class="appointment-form" onsubmit="submitAppointment(event)">
             <div class="form-group">
                 <label for="name">👤 Nombre Completo:</label>
-                <input type="text" id="name" name="name" required placeholder="Ingrese su nombre completo">
+                <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre completo">
             </div>
             <div class="form-group">
                 <label for="email">📧 Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico">
+                <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
             </div>
             <div class="form-group">
-                <label for="phone">📞 Número Telefónico:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Ingrese su número telefónico">
+                <label for="phone">📞 Número de Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Ingresa tu número de teléfono">
             </div>
             <div class="form-group">
                 <label for="date">📅 Fecha Preferida:</label>
@@ -99,15 +99,15 @@
             <div class="form-group">
                 <label for="service">🛠️ Tipo de Servicio:</label>
                 <select id="service" name="service" required>
-                    <option value="roof-repair">Reparación de Techos</option>
-                    <option value="roof-replacement">Reemplazo de Techos</option>
+                    <option value="roof-repair">Reparación de Techo</option>
+                    <option value="roof-replacement">Reemplazo de Techo</option>
                     <option value="inspection">Inspección</option>
                     <option value="painting">Pintura</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="message">💬 Detalles Adicionales:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Ingrese detalles adicionales..."></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Ingresa cualquier detalle adicional..."></textarea>
             </div>
             <button type="submit" class="cta-button">Enviar Solicitud ✅</button>
         </form>
@@ -115,15 +115,15 @@
 
     <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2024 Heavenly Roofing. 🌟 Creado con ❤️ en Oklahoma City. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Heavenly Roofing. 🌟 Construido con ❤️ en la ciudad de Oklahoma. Todos los derechos reservados.</p>
         <nav class="legal-links">
-            <a href="legal/terms_es.html">📝 Términos y Condiciones</a>
-            <a href="legal/privacy_es.html">🔒 Política de Privacidad</a>
-            <a href="legal/disclaimer_es.html">⚠️ Descargo de Responsabilidad</a>
-            <a href="legal/warranty_es.html">📜 Política de Garantía</a>
-            <a href="legal/refund_es.html">💵 Política de Reembolso</a>
-            <a href="legal/accessibility_es.html">♿ Declaración de Accesibilidad</a>
-            <a href="legal/cookies_es.html">🍪 Política de Cookies</a>
+            <a href="legal/terms.html">📝 Términos y Condiciones</a>
+            <a href="legal/privacy.html">🔒 Política de Privacidad</a>
+            <a href="legal/disclaimer.html">⚠️ Descargo de Responsabilidad</a>
+            <a href="legal/warranty.html">📜 Política de Garantía</a>
+            <a href="legal/refund.html">💵 Política de Reembolsos</a>
+            <a href="legal/accessibility.html">♿ Declaración de Accesibilidad</a>
+            <a href="legal/cookies.html">🍪 Política de Cookies</a>
         </nav>
     </footer>
 </body>

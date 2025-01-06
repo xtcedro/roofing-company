@@ -3,13 +3,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
+const morgan = require('morgan');
+require('dotenv').config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(morgan('dev'));
 
 // Database setup
 const db = new sqlite3.Database('./database/database.sqlite', (err) => {
@@ -17,6 +20,26 @@ const db = new sqlite3.Database('./database/database.sqlite', (err) => {
         console.error('Error opening database:', err.message);
     } else {
         console.log('Connected to SQLite database.');
+        // Initialize the database schema
+        db.serialize(() => {
+            db.run(`
+                CREATE TABLE IF NOT EXISTS appointments (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    email TEXT NOT NULL,
+                    phone TEXT NOT NULL,
+                    date TEXT NOT NULL,
+                    service TEXT NOT NULL,
+                    message TEXT
+                )
+            `, (err) => {
+                if (err) {
+                    console.error('Error creating table:', err.message);
+                } else {
+                    console.log('Appointments table ensured.');
+                }
+            });
+        });
     }
 });
 
@@ -38,6 +61,18 @@ app.get('/', (req, res) => {
 // Handle 404 errors
 app.use((req, res) => {
     res.status(404).send('404: Page not found');
+});
+
+// Graceful shutdown
+process.on('SIGINT', () => {
+    db.close((err) => {
+        if (err) {
+            console.error('Error closing database:', err.message);
+        } else {
+            console.log('Database connection closed.');
+        }
+        process.exit(0);
+    });
 });
 
 // Start the server

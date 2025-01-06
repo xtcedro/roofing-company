@@ -4,22 +4,20 @@ const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const morgan = require('morgan');
 require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const cors = require('cors');
-
+// Configure CORS
 app.use(cors({
-    origin: 'http://www.domingueztechsolutions.com', // Allow requests from this domain
-    methods: ['GET', 'POST', 'DELETE'],              // Specify allowed methods
-    credentials: true,                               // Allow cookies if needed
+    origin: 'http://www.domingueztechsolutions.com', // Allowed origin
+    methods: ['GET', 'POST', 'DELETE'],              // Allowed methods
+    credentials: true                                // Allow cookies if needed
 }));
-
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
 app.use(morgan('dev'));
 
 // Database setup
@@ -54,7 +52,7 @@ const db = new sqlite3.Database('./database/database.sqlite', (err) => {
 // Make the database available to other modules
 app.set('db', db);
 
-// Serve static files (for HTML, CSS, JS files)
+// Serve static files (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, '../html')));
 
 // Import routes

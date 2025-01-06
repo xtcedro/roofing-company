@@ -3,15 +3,15 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const morgan = require('morgan');
-require('dotenv').config();
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Configure CORS
 app.use(cors({
-    origin: 'https://www.domingueztechsolutions.com', // Allowed origin
+    origin: ['https://www.domingueztechsolutions.com', 'http://localhost'], // Allow domain and localhost for testing
     methods: ['GET', 'POST', 'DELETE'],              // Allowed methods
     credentials: true                                // Allow cookies if needed
 }));
@@ -26,7 +26,6 @@ const db = new sqlite3.Database('./database/database.sqlite', (err) => {
         console.error('Error opening database:', err.message);
     } else {
         console.log('Connected to SQLite database.');
-        // Initialize the database schema
         db.serialize(() => {
             db.run(`
                 CREATE TABLE IF NOT EXISTS appointments (
@@ -39,11 +38,8 @@ const db = new sqlite3.Database('./database/database.sqlite', (err) => {
                     message TEXT
                 )
             `, (err) => {
-                if (err) {
-                    console.error('Error creating table:', err.message);
-                } else {
-                    console.log('Appointments table ensured.');
-                }
+                if (err) console.error('Error creating table:', err.message);
+                else console.log('Appointments table ensured.');
             });
         });
     }
@@ -72,11 +68,8 @@ app.use((req, res) => {
 // Graceful shutdown
 process.on('SIGINT', () => {
     db.close((err) => {
-        if (err) {
-            console.error('Error closing database:', err.message);
-        } else {
-            console.log('Database connection closed.');
-        }
+        if (err) console.error('Error closing database:', err.message);
+        else console.log('Database connection closed.');
         process.exit(0);
     });
 });

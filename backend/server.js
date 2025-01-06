@@ -92,6 +92,16 @@ app.delete('/api/appointments/:id', (req, res) => {
     });
 });
 
+// Serve index.html as the default route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../html/index.html'));
+});
+
+// Handle 404 errors
+app.use((req, res) => {
+    res.status(404).send('404: Page not found');
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

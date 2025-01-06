@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const morgan = require('morgan');
@@ -8,6 +7,14 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://www.domingueztechsolutions.com', // Allow requests from this domain
+    methods: ['GET', 'POST', 'DELETE'],              // Specify allowed methods
+    credentials: true,                               // Allow cookies if needed
+}));
 
 
 // Middleware

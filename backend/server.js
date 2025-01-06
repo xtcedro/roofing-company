@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // Configure CORS
 app.use(cors({
-    origin: 'http://www.domingueztechsolutions.com', // Allowed origin
+    origin: 'https://www.domingueztechsolutions.com', // Allowed origin
     methods: ['GET', 'POST', 'DELETE'],              // Allowed methods
     credentials: true                                // Allow cookies if needed
 }));

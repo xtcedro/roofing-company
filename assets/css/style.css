@@ -18,6 +18,102 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+/* Header Titles */
+.header-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6); /* Subtle black shadow for depth */
+}
+
+/* Language Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Prevents scrolling when the modal is open */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #000000; /* Pure black background */
+    color: #FFFFFF; /* White text */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    max-width: 400px;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+/* Modal Title */
+.modal-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Language Options */
+.language-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Language Buttons */
+.language-options button {
+    background-color: #1C1C1C; /* Dark gray for buttons */
+    color: #FFD700; /* Gold text */
+    padding: 1rem 1.5rem;
+    border: 2px solid #FF0000; /* Red border */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between text and flag */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover Effect for Buttons */
+.language-options button:hover {
+    background-color: #FFD700; /* Gold hover effect */
+    color: #000000; /* Black text on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Flag Icon */
+.flag-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
+    border: 2px solid #FFD700; /* Gold border around flag */
+}
+
 /* Navigation Bar */
 nav {
     background-color: #000000; /* Black background */
@@ -46,21 +142,6 @@ nav a:hover {
     background-color: #FFD700; /* Gold background */
 }
 
-/* Header Titles */
-.header-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6); /* Subtle black shadow for depth */
-}
-
-/* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: center; /* Center-align the links */
@@ -127,19 +208,6 @@ nav a:hover {
     letter-spacing: 2px;
 }
 
-/* Blockquote Styling */
-blockquote {
-    font-style: italic;
-    background-color: #1C1C1C; /* Dark gray background */
-    padding: 1.5rem;
-    border-left: 5px solid #FFD700; /* Gold border */
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin: 2rem auto;
-    color: #FFFFFF; /* White text */
-    max-width: 700px;
-}
-
 /* Hero Quote Styling */
 .hero-quote {
     font-style: italic;
@@ -176,6 +244,19 @@ blockquote {
     color: #FFD700; /* Gold color */
     margin-left: 5px;
     vertical-align: bottom;
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic;
+    background-color: #1C1C1C; /* Dark gray background */
+    padding: 1.5rem;
+    border-left: 5px solid #FFD700; /* Gold border */
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    color: #FFFFFF; /* White text */
+    max-width: 700px;
 }
 
 /* Adjusted .title-banner Styling */
@@ -243,6 +324,31 @@ html {
     color: #FFCC33; /* Lighter gold on hover */
 }
 
+/* Content Section */
+.content-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8); /* Deep shadow for prominence */
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.2rem; /* Slightly larger for emphasis */
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Enhance readability */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Subtle text shadow for depth */
+}
+
 /* Call to Action Section */
 .call-to-action-section {
     background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
@@ -295,31 +401,6 @@ html {
 .cta-button:hover {
     background-color: #FFCC33; /* Lighter gold on hover */
     transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Content Section */
-.content-section {
-    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
-    color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
-    margin: 2rem auto;
-    max-width: 1200px;
-    border: 4px solid #FF0000; /* Red border */
-    border-radius: 10px; /* Smooth corners */
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8); /* Deep shadow for prominence */
-    text-align: center;
-}
-
-.content-section h2 {
-    font-size: 2.2rem; /* Slightly larger for emphasis */
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px; /* Enhance readability */
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Subtle text shadow for depth */
 }
 
 /* Services Section */
@@ -493,88 +574,6 @@ html {
 .why-choose-us .cta-button:hover {
     background-color: #FFCC33; /* Lighter gold on hover */
     transform: scale(1.05); /* Slight zoom */
-}
-
-/* Language Modal */
-.modal {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    overflow: hidden; /* Prevents scrolling when the modal is open */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #000000; /* Pure black background */
-    color: #FFFFFF; /* White text */
-    padding: 2rem;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
-    max-width: 400px;
-    width: 90%;
-    font-size: 1.5rem;
-}
-
-/* Modal Title */
-.modal-content h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Language Options */
-.language-options {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-/* Language Buttons */
-.language-options button {
-    background-color: #1C1C1C; /* Dark gray for buttons */
-    color: #FFD700; /* Gold text */
-    padding: 1rem 1.5rem;
-    border: 2px solid #FF0000; /* Red border */
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Space between text and flag */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Hover Effect for Buttons */
-.language-options button:hover {
-    background-color: #FFD700; /* Gold hover effect */
-    color: #000000; /* Black text on hover */
-    transform: scale(1.05); /* Slight zoom */
-}
-
-/* Flag Icon */
-.flag-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
-    border: 2px solid #FFD700; /* Gold border around flag */
 }
 
 /* Appointment Form Section */

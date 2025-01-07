@@ -7,14 +7,15 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
   event.preventDefault(); // Prevent the form from reloading the page
 
   // Collect form data
-  const formData = {
-    name: document.getElementById('name').value.trim(),
-    phone: document.getElementById('phone').value.trim(),
-    email: document.getElementById('email').value.trim(),
-    appointment_date: document.getElementById('date').value.trim(), // Ensure input type="date"
-    service: document.getElementById('service').value.trim(),
-    message: document.getElementById('message').value.trim(), // Ensure textarea exists
-  };
+const formData = {
+  name: document.getElementById('name').value.trim(),
+  phone: document.getElementById('phone').value.trim(),
+  email: document.getElementById('email').value.trim(),
+  appointment_date: document.getElementById('appointment_date').value.trim(), // Match with HTML id
+  appointment_time: document.getElementById('appointment_time').value.trim(), // Match with HTML id
+  service: document.getElementById('service').value.trim(),
+  message: document.getElementById('message').value.trim(), // Ensure textarea exists
+};
 
   console.log('Collected Form Data:', formData); // Debugging log for form data
 

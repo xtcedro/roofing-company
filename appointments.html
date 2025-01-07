@@ -43,7 +43,7 @@
             Please fill out the form below to request an appointment with Heavenly Roofing. 
             We’ll get back to you as soon as possible! 🛠️✨
         </p>
-        <form id="appointmentForm" class="appointment-form" onsubmit="submitAppointment(event)">
+        <form id="appointmentForm" class="appointment-form">
             <div class="form-group">
                 <label for="name">👤 Full Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -75,6 +75,8 @@
             </div>
             <button type="submit" class="cta-button">Submit Request ✅</button>
         </form>
+        <!-- Response Message -->
+        <p id="responseMessage" class="response-message"></p>
     </section>
 
     <!-- Footer -->

@@ -5,29 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submit Appointment | Heavenly Roofing Company</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="asssets/css/style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-brand">Heavenly Roofing Co.</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="view-appointments.html">View Appointments</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Header Section -->
-  <header>
-    <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
-    <p>Your trusted partner for all roofing needs. Let’s secure your home together.</p>
-  </header>
+    <!-- Header Section -->
+    <header>
+        <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
+        <div class="title-banner">
+            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Oklahoma City’s Trusted Roofing Experts">
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">📖 About Us</a>
+        <a href="services.html">🛠️ Services</a>
+        <a href="gallery.html">🖼️ Gallery</a>
+        <a href="projects.html">🚧 Projects</a>
+        <a href="appointments.html" class="active">📅 Submit Appointments</a>
+        <a href="view-appointments.html">👀 View Appointments</a>
+        <a href="contact.html">📬 Contact Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">👀 View Appointments 🌟</h1>
+        <blockquote class="hero-quote">
+            💡 <em>"Effortless management for your roofing needs!"</em> 🏡
+        </blockquote>
+    </section>
+
 
   <!-- Main Content -->
   <main>
+    <!-- Appointments Section -->
+    <section class="appointments-section">
+        <h2 class="section-title">📅 All Scheduled Appointments 🚀</h2>
+        <div id="appointments-container" class="appointments-container">
     <form id="appointmentForm">
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="50">

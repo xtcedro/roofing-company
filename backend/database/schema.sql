@@ -1,21 +1,23 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS appointment_db;
+
+-- Use the created database
+USE appointment_db;
+
 -- Create the appointments table
 CREATE TABLE IF NOT EXISTS appointments (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,  -- Unique identifier for each appointment
-    name TEXT NOT NULL,                    -- Full name of the client
-    email TEXT NOT NULL,                   -- Email address of the client
-    phone TEXT NOT NULL,                   -- Phone number of the client
-    date DATE NOT NULL,                    -- Preferred appointment date
-    service TEXT NOT NULL,                 -- Type of service requested
-    message TEXT,                          -- Additional details from the client
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Timestamp when the appointment was created
-    UNIQUE(email, date)                    -- Ensure unique appointments per email and date
+    id INT AUTO_INCREMENT PRIMARY KEY,         -- Unique identifier for each appointment
+    name VARCHAR(100) NOT NULL,                -- Full name of the customer
+    phone VARCHAR(10) NOT NULL,                -- Phone number (10 digits only)
+    email VARCHAR(100) NOT NULL,               -- Customer's email address
+    appointment_date DATE NOT NULL,            -- Preferred appointment date
+    service VARCHAR(255) NOT NULL,             -- Type of service requested
+    message TEXT,                              -- Additional details or notes
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Timestamp for record creation
 );
 
--- Index for faster queries on date
-CREATE INDEX IF NOT EXISTS idx_appointments_date ON appointments (date);
-
--- Index for faster searches by email
-CREATE INDEX IF NOT EXISTS idx_appointments_email ON appointments (email);
-
--- Index for faster queries on service (optional)
-CREATE INDEX IF NOT EXISTS idx_appointments_service ON appointments (service);
+-- Optional: Insert sample data for testing
+INSERT INTO appointments (name, phone, email, appointment_date, service, message)
+VALUES 
+('John Doe', '1234567890', 'john.doe@example.com', '2025-01-10', 'Roof Repair', 'Urgent roof repair needed.'),
+('Jane Smith', '0987654321', 'jane.smith@example.com', '2025-01-11', 'Inspection', 'Requesting a standard roof inspection.');

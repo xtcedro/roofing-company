@@ -8,12 +8,12 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
 
   // Collect form data
   const formData = {
-    name: document.getElementById('name').value,
-    phone: document.getElementById('phone').value,
-    email: document.getElementById('email').value,
-    appointment_date: document.getElementById('date').value,
-    service: document.getElementById('service').value, // Collect service field
-    message: document.getElementById('message').value, // Collect message field
+    name: document.getElementById('name').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    appointment_date: document.getElementById('date').value, // Ensure input type="date"
+    service: document.getElementById('service').value.trim(),
+    message: document.getElementById('message').value.trim(), // Ensure textarea exists
   };
 
   // Send data to the backend
@@ -32,13 +32,13 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
 
     if (response.ok) {
       responseMessage.textContent = message || 'Appointment booked successfully!';
-      responseMessage.className = 'response-message success'; // Success styling
+      responseMessage.className = 'response-message success'; // Apply success style
       document.getElementById('appointmentForm').reset(); // Clear the form
     } else {
       responseMessage.textContent = `Error: ${message || 'Failed to book the appointment.'}`;
-      responseMessage.className = 'response-message error'; // Error styling
+      responseMessage.className = 'response-message error'; // Apply error style
     }
-    responseMessage.style.display = 'block'; // Ensure message is visible
+    responseMessage.style.display = 'block'; // Make the message visible
   } catch (error) {
     console.error('Error:', error);
     const responseMessage = document.getElementById('responseMessage');

@@ -31,40 +31,50 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">👀 View Appointments 🌟</h1>
+        <h1 class="hero-title">📅 Book Your Appointment 🌟</h1>
         <blockquote class="hero-quote">
-            💡 <em>"Effortless management for your roofing needs!"</em> 🏡
+            💡 <em>"Effortless scheduling, tailored for your roofing needs!"</em> 🏡
         </blockquote>
     </section>
-
 
   <!-- Main Content -->
   <main>
     <!-- Appointments Section -->
     <section class="appointments-section">
-        <h2 class="section-title">📅 All Scheduled Appointments 🚀</h2>
-        <div id="appointments-container" class="appointments-container">
-    <form id="appointmentForm">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="50">
+        <h2 class="section-title">📅 Schedule Your Appointment 🚀</h2>
+        <form id="appointmentForm">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="50">
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-      <label for="date">Preferred Date:</label>
-      <input type="date" id="date" name="date" required>
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required>
 
-      <label for="time">Preferred Time:</label>
-      <input type="time" id="time" name="time" required>
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" name="time" required>
 
-      <button type="submit">Submit Appointment</button>
-    </form>
-    <p id="responseMessage"></p>
+          <label for="service">Service Type:</label>
+          <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="roof-repair">Roof Repair</option>
+              <option value="roof-replacement">Roof Replacement</option>
+              <option value="inspection">Inspection</option>
+              <option value="painting">Painting</option>
+          </select>
+
+          <label for="message">Additional Details:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Enter any additional details..."></textarea>
+
+          <button type="submit">Submit Appointment</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
   </main>
-
 
   <script src="assets/js/script.js" defer></script>
 </body>

@@ -11,10 +11,21 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
     name: document.getElementById('name').value.trim(),
     phone: document.getElementById('phone').value.trim(),
     email: document.getElementById('email').value.trim(),
-    appointment_date: document.getElementById('date').value, // Ensure input type="date"
+    appointment_date: document.getElementById('date').value.trim(), // Ensure input type="date"
     service: document.getElementById('service').value.trim(),
     message: document.getElementById('message').value.trim(), // Ensure textarea exists
   };
+
+  console.log('Collected Form Data:', formData); // Debugging log for form data
+
+  // Validate form data
+  if (!formData.name || !formData.phone || !formData.email || !formData.appointment_date || !formData.service) {
+    const responseMessage = document.getElementById('responseMessage');
+    responseMessage.textContent = 'All fields are required.';
+    responseMessage.className = 'response-message error';
+    responseMessage.style.display = 'block';
+    return;
+  }
 
   // Send data to the backend
   try {

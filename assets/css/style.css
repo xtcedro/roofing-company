@@ -754,6 +754,31 @@ html {
     transform: scale(1.05); /* Slight zoom */
 }
 
+/* Response Message Styling */
+.response-message {
+  font-size: 1rem; /* Adjust the font size */
+  font-weight: bold; /* Make the text stand out */
+  text-align: center; /* Center the message */
+  margin-top: 15px; /* Add spacing above the message */
+  padding: 10px; /* Add padding for better readability */
+  border-radius: 8px; /* Round the corners */
+  display: none; /* Initially hidden */
+}
+
+/* Success Message */
+.response-message.success {
+  color: #38a169; /* Green text for success */
+  background-color: #e6f4ea; /* Light green background */
+  border: 1px solid #38a169; /* Green border */
+}
+
+/* Error Message */
+.response-message.error {
+  color: #e53e3e; /* Red text for errors */
+  background-color: #fbeaea; /* Light red background */
+  border: 1px solid #e53e3e; /* Red border */
+}
+
 /* Legal Links */
 .legal-links {
     list-style-type: none; /* Removes default bullet points */

@@ -21,17 +21,16 @@ app.get('/api', (req, res) => {
 
 // Appointment submission endpoint
 app.post('/api/appointments', (req, res) => {
-  const { name, phone, email, appointment_date, service, message } = req.body;
+  const { name, phone, email, appointment_date, appointment_time } = req.body;
 
-  // Validate required fields
-  if (!name || !phone || !email || !appointment_date || !service) {
-    return res.status(400).send('All required fields must be provided.');
+  if (!name || !phone || !email || !appointment_date || !appointment_time) {
+    return res.status(400).send('All fields are required.');
   }
 
-  const sql = `INSERT INTO appointments (name, phone, email, appointment_date, service, message)
-               VALUES (?, ?, ?, ?, ?, ?)`;
+  const sql = `INSERT INTO appointments (name, phone, email, appointment_date, appointment_time)
+               VALUES (?, ?, ?, ?, ?)`;
 
-  db.query(sql, [name, phone, email, appointment_date, service, message], (err, result) => {
+  db.query(sql, [name, phone, email, appointment_date, appointment_time], (err, result) => {
     if (err) {
       console.error('Database error:', err);
       return res.status(500).send('Error saving appointment.');
@@ -40,9 +39,8 @@ app.post('/api/appointments', (req, res) => {
   });
 });
 
-// Fetch all appointments
 app.get('/api/appointments', (req, res) => {
-  const sql = `SELECT * FROM appointments ORDER BY appointment_date ASC`;
+  const sql = `SELECT * FROM appointments`;
   db.query(sql, (err, results) => {
     if (err) {
       console.error('Database query failed:', err);
@@ -50,11 +48,6 @@ app.get('/api/appointments', (req, res) => {
     }
     res.status(200).json(results); // Send the appointments as JSON
   });
-});
-
-// Health check endpoint
-app.get('/health', (req, res) => {
-  res.status(200).send('Server is healthy!');
 });
 
 // Start the server

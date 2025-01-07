@@ -7,15 +7,18 @@
     <title>View Appointments - Heavenly Roofing</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
+        const API_BASE_URL = window.location.origin.includes('localhost')
+            ? 'http://localhost:3000'
+            : 'https://www.domingueztechsolutions.com';
+
         async function fetchAppointments() {
             try {
-                // Ensure the URL includes the full backend URL with port
-                const response = await fetch('https://www.domingueztechsolutions.com:3000/api/appointments', {
+                // Fetch appointments from the backend
+                const response = await fetch(`${API_BASE_URL}/api/appointments`, {
                     method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
                     },
-                    credentials: 'include' // Ensure cookies are included if needed
                 });
 
                 if (!response.ok) {
@@ -39,7 +42,7 @@
                         <h3>👤 ${appointment.name}</h3>
                         <p><strong>📧 Email:</strong> ${appointment.email}</p>
                         <p><strong>📞 Phone:</strong> ${appointment.phone}</p>
-                        <p><strong>📅 Date:</strong> ${appointment.date}</p>
+                        <p><strong>📅 Date:</strong> ${appointment.appointment_date}</p>
                         <p><strong>🛠️ Service:</strong> ${appointment.service}</p>
                         <p><strong>💬 Details:</strong> ${appointment.message || 'No additional details provided.'}</p>
                     `;

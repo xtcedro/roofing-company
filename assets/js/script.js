@@ -12,8 +12,8 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
     phone: document.getElementById('phone').value,
     email: document.getElementById('email').value,
     appointment_date: document.getElementById('date').value,
-    appointment_time: document.getElementById('time').value,
-    service: document.getElementById('service').value, // Add service field
+    service: document.getElementById('service').value, // Collect service field
+    message: document.getElementById('message').value, // Collect message field
   };
 
   // Send data to the backend
@@ -27,25 +27,23 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
     });
 
     // Display success or error message
-    const message = await response.text();
     const responseMessage = document.getElementById('responseMessage');
+    const message = await response.text();
+
     if (response.ok) {
-      responseMessage.textContent = message;
-      responseMessage.style.color = 'green';
+      responseMessage.textContent = message || 'Appointment booked successfully!';
+      responseMessage.className = 'response-message success'; // Success styling
       document.getElementById('appointmentForm').reset(); // Clear the form
     } else {
-      responseMessage.textContent = `Error: ${message}`;
-      responseMessage.style.color = 'red';
+      responseMessage.textContent = `Error: ${message || 'Failed to book the appointment.'}`;
+      responseMessage.className = 'response-message error'; // Error styling
     }
+    responseMessage.style.display = 'block'; // Ensure message is visible
   } catch (error) {
     console.error('Error:', error);
-    document.getElementById('responseMessage').textContent =
-      'Failed to connect to the server.';
-    document.getElementById('responseMessage').style.color = 'red';
+    const responseMessage = document.getElementById('responseMessage');
+    responseMessage.textContent = 'Failed to connect to the server.';
+    responseMessage.className = 'response-message error';
+    responseMessage.style.display = 'block';
   }
-});
-
-// Health check endpoint
-app.get('/health', (req, res) => {
-  res.status(200).send('OK');
 });

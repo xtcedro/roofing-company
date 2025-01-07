@@ -5,7 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submit Appointment | Heavenly Roofing Company</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="asssets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Appointment Form Section */
+    .appointment-form-section {
+        background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+        color: #FFD700; /* Gold text */
+        padding: 3rem 2rem;
+        text-align: center;
+        border: 4px solid #FF0000; /* Red border */
+        border-radius: 10px; /* Smooth corners */
+        margin: 2rem auto;
+        max-width: 900px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+    }
+
+    .appointment-form-section .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .appointment-form {
+        display: grid;
+        gap: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .appointment-form .form-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .appointment-form .form-group label {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        color: #FFD700; /* Gold text */
+    }
+
+    .appointment-form .form-group input,
+    .appointment-form .form-group select,
+    .appointment-form .form-group textarea {
+        padding: 0.75rem;
+        border: 2px solid #FF0000; /* Red border */
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #000000; /* Black text */
+        background-color: #FFFFFF; /* White background */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .appointment-form .form-group input:focus,
+    .appointment-form .form-group select:focus,
+    .appointment-form .form-group textarea:focus {
+        outline: none;
+        border-color: #FFD700; /* Gold focus border */
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.8); /* Gold glow */
+    }
+
+    .appointment-form .cta-button {
+        padding: 0.75rem 2rem;
+        background-color: #FFD700; /* Gold button */
+        color: #000000; /* Black text */
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+    }
+
+    .appointment-form .cta-button:hover {
+        background-color: #FFCC33; /* Lighter gold on hover */
+        transform: scale(1.05); /* Slight zoom */
+    }
+  </style>
 </head>
 <body>
 
@@ -31,40 +112,49 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">👀 View Appointments 🌟</h1>
+        <h1 class="hero-title">📅 Book Your Appointment 🌟</h1>
         <blockquote class="hero-quote">
-            💡 <em>"Effortless management for your roofing needs!"</em> 🏡
+            💡 <em>"Effortless scheduling, tailored for your roofing needs!"</em> 🏡
         </blockquote>
     </section>
 
-
-  <!-- Main Content -->
-  <main>
-    <!-- Appointments Section -->
-    <section class="appointments-section">
-        <h2 class="section-title">📅 All Scheduled Appointments 🚀</h2>
-        <div id="appointments-container" class="appointments-container">
-    <form id="appointmentForm">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="50">
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-      <label for="date">Preferred Date:</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="time">Preferred Time:</label>
-      <input type="time" id="time" name="time" required>
-
-      <button type="submit">Submit Appointment</button>
-    </form>
-    <p id="responseMessage"></p>
-  </main>
-
+    <!-- Appointment Form Section -->
+    <section class="appointment-form-section">
+        <h2 class="section-title">Schedule Your Appointment 🚀</h2>
+        <form id="appointmentForm" class="appointment-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Service Type:</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="roof-repair">Roof Repair</option>
+                    <option value="roof-replacement">Roof Replacement</option>
+                    <option value="inspection">Inspection</option>
+                    <option value="painting">Painting</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Details:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter any additional details..."></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit Appointment</button>
+        </form>
+    </section>
 
   <script src="assets/js/script.js" defer></script>
 </body>

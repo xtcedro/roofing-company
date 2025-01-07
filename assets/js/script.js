@@ -13,6 +13,7 @@ document.getElementById('appointmentForm').addEventListener('submit', async (eve
     email: document.getElementById('email').value,
     appointment_date: document.getElementById('date').value,
     appointment_time: document.getElementById('time').value,
+    service: document.getElementById('service').value, // Add service field
   };
 
   // Send data to the backend

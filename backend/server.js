@@ -1,80 +1,63 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
-const sqlite3 = require('sqlite3').verbose();
-const morgan = require('morgan');
+const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config();
+const db = require('./config/db'); // Import database connection
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configure CORS
-app.use(cors({
-    origin: ['https://www.domingueztechsolutions.com', 'http://localhost'], // Allow domain and localhost for testing
-    methods: ['GET', 'POST', 'DELETE'],              // Allowed methods
-    credentials: true                                // Allow cookies if needed
-}));
-
 // Middleware
 app.use(bodyParser.json());
-app.use(morgan('dev'));
+app.use(cors());
 
-// Database setup
-const db = new sqlite3.Database('./database/database.sqlite', (err) => {
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Test route
+app.get('/api', (req, res) => {
+  res.send('API is working!');
+});
+
+// Appointment submission endpoint
+app.post('/api/appointments', (req, res) => {
+  const { name, phone, email, appointment_date, service, message } = req.body;
+
+  // Validate required fields
+  if (!name || !phone || !email || !appointment_date || !service) {
+    return res.status(400).send('All required fields must be provided.');
+  }
+
+  const sql = `INSERT INTO appointments (name, phone, email, appointment_date, service, message)
+               VALUES (?, ?, ?, ?, ?, ?)`;
+
+  db.query(sql, [name, phone, email, appointment_date, service, message], (err, result) => {
     if (err) {
-        console.error('Error opening database:', err.message);
-    } else {
-        console.log('Connected to SQLite database.');
-        db.serialize(() => {
-            db.run(`
-                CREATE TABLE IF NOT EXISTS appointments (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    name TEXT NOT NULL,
-                    email TEXT NOT NULL,
-                    phone TEXT NOT NULL,
-                    date TEXT NOT NULL,
-                    service TEXT NOT NULL,
-                    message TEXT
-                )
-            `, (err) => {
-                if (err) console.error('Error creating table:', err.message);
-                else console.log('Appointments table ensured.');
-            });
-        });
+      console.error('Database error:', err);
+      return res.status(500).send('Error saving appointment.');
     }
+    res.status(200).send('Appointment booked successfully!');
+  });
 });
 
-// Make the database available to other modules
-app.set('db', db);
-
-// Serve static files (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, '../html')));
-
-// Import routes
-const appointmentsRoutes = require('./routes/appointments');
-app.use('/api/appointments', appointmentsRoutes);
-
-// Serve index.html as the default route
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html/index.html'));
+// Fetch all appointments
+app.get('/api/appointments', (req, res) => {
+  const sql = `SELECT * FROM appointments ORDER BY appointment_date ASC`;
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Database query failed:', err);
+      return res.status(500).send('Error fetching appointments.');
+    }
+    res.status(200).json(results); // Send the appointments as JSON
+  });
 });
 
-// Handle 404 errors
-app.use((req, res) => {
-    res.status(404).send('404: Page not found');
-});
-
-// Graceful shutdown
-process.on('SIGINT', () => {
-    db.close((err) => {
-        if (err) console.error('Error closing database:', err.message);
-        else console.log('Database connection closed.');
-        process.exit(0);
-    });
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('Server is healthy!');
 });
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

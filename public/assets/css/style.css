@@ -73,6 +73,24 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+.auth-button {
+    background-color: black;
+    color: red;
+    border: 2px solid red;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.auth-button:hover {
+    background-color: red;
+    color: black;
+}
+
 /* Language Options */
 .language-options {
     display: flex;

@@ -83,7 +83,7 @@ h1, h2, h3 {
 /* Language Buttons */
 .language-options button {
     background-color: #1C1C1C; /* Dark gray for buttons */
-    color: #FFD700; /* Gold text */
+    color: #FF0000; /* Red text */
     padding: 1rem 1.5rem;
     border: 2px solid #FF0000; /* Red border */
     cursor: pointer;
@@ -100,7 +100,7 @@ h1, h2, h3 {
 
 /* Hover Effect for Buttons */
 .language-options button:hover {
-    background-color: #FFD700; /* Gold hover effect */
+    background-color: #FF0000; /* Red hover effect */
     color: #000000; /* Black text on hover */
     transform: scale(1.05); /* Slight zoom */
 }
@@ -111,7 +111,7 @@ h1, h2, h3 {
     height: 32px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
-    border: 2px solid #FFD700; /* Gold border around flag */
+    border: 2px solid #FF0000; /* Red border around flag */
 }
 
 /* Navigation Bar */
@@ -127,7 +127,7 @@ nav {
 }
 
 nav a {
-    color: #FFD700; /* Gold text */
+    color: #FF0000; /* Red text */
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -139,7 +139,7 @@ nav a {
 
 nav a:hover {
     color: #000000; /* Black text on hover */
-    background-color: #FFD700; /* Gold background */
+    background-color: #FF0000; /* Red background */
 }
 
 .navbar {
@@ -157,7 +157,7 @@ nav a:hover {
 
 /* Navigation Links */
 .navbar a {
-    color: #FFD700; /* Gold text for links */
+    color: #FF0000; /* Red text for links */
     text-decoration: none; /* Removes underline */
     font-weight: bold;
     text-transform: uppercase;
@@ -170,14 +170,14 @@ nav a:hover {
 /* Hover Effect for Links */
 .navbar a:hover {
     color: #FF0000; /* Red text on hover */
-    background-color: #FFD700; /* Gold background on hover */
+    background-color: #FF0000; /* Red background on hover */
 }
 
 /* Active Link Styling */
 .navbar a.active {
-    color: #FFD700; /* Gold text for active link */
+    color: #FF0000; /* Red text for active link */
     background-color: transparent; /* No background for active link */
-    border-bottom: 2px solid #FFD700; /* Gold underline for active state */
+    border-bottom: 2px solid #FF0000; /* Red underline for active state */
 }
 
 /* Hero Section */
@@ -192,7 +192,7 @@ nav a:hover {
 .hero-section p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #FFD700; /* Gold text for paragraphs */
+    color: #FF0000; /* Red text for paragraphs */
 }
 
 /* Hero Title */
@@ -212,10 +212,9 @@ nav a:hover {
 .hero-quote {
     font-style: italic;
     font-size: 1.5rem; /* Slightly larger font for emphasis */
-    color: #FFD700; /* Gold text */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: #FF0000; /* Red text */
     padding: 1.5rem;
-    border-left: 5px solid #FFD700; /* Gold border on the left */
+    border-left: 5px solid #FF0000; /* Red border on the left */
     border-radius: 5px;
     max-width: 800px;
     margin: 2rem auto;
@@ -224,7 +223,7 @@ nav a:hover {
 }
 
 .hero-quote em {
-    color: #FFD700; /* Gold color for emphasized text */
+    color: #FF0000; /* Red color for emphasized text */
     font-weight: bold;
     display: block;
     margin-top: 0.5rem;
@@ -233,7 +232,7 @@ nav a:hover {
 .hero-quote::before {
     content: '“'; /* Opening quotation mark */
     font-size: 2rem;
-    color: #FFD700; /* Gold color */
+    color: #FF0000; /* Red color */
     margin-right: 5px;
     vertical-align: top;
 }
@@ -241,7 +240,7 @@ nav a:hover {
 .hero-quote::after {
     content: '”'; /* Closing quotation mark */
     font-size: 2rem;
-    color: #FFD700; /* Gold color */
+    color: #FF0000; /* Red color */
     margin-left: 5px;
     vertical-align: bottom;
 }
@@ -251,7 +250,7 @@ blockquote {
     font-style: italic;
     background-color: #1C1C1C; /* Dark gray background */
     padding: 1.5rem;
-    border-left: 5px solid #FFD700; /* Gold border */
+    border-left: 5px solid #FF0000; /* Red border */
     border-radius: 5px;
     font-size: 1.1rem;
     margin: 2rem auto;
@@ -380,7 +379,7 @@ html {
 }
 
 .call-to-action-section strong {
-    color: #FFD700; /* Gold for emphasis */
+    color: #FF0000; /* Red for emphasis */
 }
 
 /* Call-to-Action Button */

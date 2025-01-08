@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View all appointments booked with Heavenly Roofing - Your trusted roofing experts in Oklahoma City.">
-    <title>View Appointments - Heavenly Roofing</title>
+    <meta name="description" content="View all appointments booked with Dominguez Tech Solutions - Your trusted tech solutions partner in Oklahoma City.">
+    <title>View Appointments - Dominguez Tech Solutions</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
         const API_BASE_URL = window.location.origin.includes('localhost')
@@ -13,7 +13,6 @@
 
         async function fetchAppointments() {
             try {
-                // Fetch appointments from the backend
                 const response = await fetch(`${API_BASE_URL}/api/appointments`, {
                     method: 'GET',
                     headers: {
@@ -34,16 +33,13 @@
                     return;
                 }
 
-                // Render each appointment as a card
                 appointments.forEach((appointment) => {
                     const appointmentCard = document.createElement('div');
                     appointmentCard.className = 'appointment-card';
 
-                    // Format date and time
-                    const formattedDate = new Date(appointment.appointment_date).toLocaleDateString();
-                    const formattedTime = appointment.appointment_time || 'Not specified';
+                    const formattedDate = new Date(appointment.date).toLocaleDateString();
+                    const formattedTime = appointment.time || 'Not specified';
 
-                    // Create the HTML content for each card
                     appointmentCard.innerHTML = `
                         <h3>👤 ${appointment.name}</h3>
                         <p><strong>📧 Email:</strong> ${appointment.email}</p>
@@ -63,16 +59,15 @@
             }
         }
 
-        // Fetch appointments when the DOM is ready
         document.addEventListener('DOMContentLoaded', fetchAppointments);
     </script>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
+        <h1 class="header-title">🌟 Dominguez Tech Solutions 🌟</h1>
         <div class="title-banner">
-            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Oklahoma City’s Trusted Roofing Experts">
+            <img src="assets/images/dominguez-banner.png" alt="Dominguez Tech Solutions - Your Trusted Tech Partner">
         </div>
     </header>
 
@@ -81,7 +76,6 @@
         <a href="index.html">🏠 Home</a>
         <a href="about.html">📖 About Us</a>
         <a href="services.html">🛠️ Services</a>
-        <a href="gallery.html">🖼️ Gallery</a>
         <a href="projects.html">🚧 Projects</a>
         <a href="appointments.html">📅 Submit Appointments</a>
         <a href="view-appointments.html" class="active">👀 View Appointments</a>
@@ -92,7 +86,7 @@
     <section class="hero-section">
         <h1 class="hero-title">👀 View Appointments 🌟</h1>
         <blockquote class="hero-quote">
-            💡 <em>"Effortless management for your roofing needs!"</em> 🏡
+            💡 <em>"Effortless management for all your tech needs!"</em> 💻
         </blockquote>
     </section>
 
@@ -106,7 +100,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Heavenly Roofing. 🌟 Built with ❤️ in Oklahoma City. All rights reserved.</p>
+        <p>&copy; 2024 Dominguez Tech Solutions. 🌟 Built with ❤️ in Oklahoma City. All rights reserved.</p>
         <nav class="legal-links">
             <a href="legal/terms.html">📝 Terms and Conditions</a>
             <a href="legal/privacy.html">🔒 Privacy Policy</a>

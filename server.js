@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const bcrypt = require('bcrypt'); // For password hashing
 const db = require('./config/db'); // Import database connection
 
 const app = express();
@@ -52,7 +53,7 @@ app.get('/api/appointments', (req, res) => {
       console.error('Database query failed:', err);
       return res.status(500).send('Error fetching appointments.');
     }
-    res.status(200).json(results); // Send the appointments as JSON
+    res.status(200).json(results);
   });
 });
 
@@ -64,12 +65,12 @@ app.get('/api/users', (req, res) => {
       console.error('Database query failed:', err);
       return res.status(500).send('Error fetching users.');
     }
-    res.status(200).json(results); // Send the users as JSON
+    res.status(200).json(results);
   });
 });
 
 // Add a new user
-app.post('/api/users', (req, res) => {
+app.post('/api/users', async (req, res) => {
   const { name, email, password } = req.body;
 
   // Validate required fields
@@ -77,15 +78,26 @@ app.post('/api/users', (req, res) => {
     return res.status(400).send('All fields are required.');
   }
 
-  const sql = `INSERT INTO users (name, email, password) VALUES (?, ?, ?)`;
+  try {
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-  db.query(sql, [name, email, password], (err, result) => {
-    if (err) {
-      console.error('Database error:', err);
-      return res.status(500).send('Error saving user.');
-    }
-    res.status(200).send('User registered successfully!');
-  });
+    const sql = `INSERT INTO users (name, email, password) VALUES (?, ?, ?)`;
+
+    db.query(sql, [name, email, hashedPassword], (err, result) => {
+      if (err) {
+        if (err.code === 'ER_DUP_ENTRY') {
+          return res.status(400).send('Email is already registered.');
+        }
+        console.error('Database error:', err);
+        return res.status(500).send('Error saving user.');
+      }
+      res.status(200).send('User registered successfully!');
+    });
+  } catch (err) {
+    console.error('Error hashing password:', err);
+    res.status(500).send('Internal server error.');
+  }
 });
 
 // Start the server

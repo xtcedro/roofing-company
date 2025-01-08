@@ -18,6 +18,6 @@ CREATE TABLE IF NOT EXISTS appointments (
 
 -- Optional: Insert sample data for testing
 INSERT INTO appointments (name, phone, email, appointment_date, service, message)
-VALUES 
+VALUES
 ('John Doe', '1234567890', 'john.doe@example.com', '2025-01-10', 'Roof Repair', 'Urgent roof repair needed.'),
 ('Jane Smith', '0987654321', 'jane.smith@example.com', '2025-01-11', 'Inspection', 'Requesting a standard roof inspection.');

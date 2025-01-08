@@ -108,8 +108,8 @@ h1, h2, h3 {
 
 /* Flag Icon */
 .flag-icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
     border: 2px solid #FF0000; /* Red border around flag */
@@ -170,7 +170,7 @@ nav a:hover {
 
 /* Hover Effect for Links */
 .navbar a:hover {
-    color: #FF0000; /* Red text on hover */
+    color: #FFFFFF; /* Black text on hover */
     background-color: #FF0000; /* Red background on hover */
 }
 

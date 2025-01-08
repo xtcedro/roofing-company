@@ -11,7 +11,8 @@ body {
 
 /* Gold Gradient Titles */
 h1, h2, h3 {
-    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    background: linear-gradient(135deg, #FF0000, #FF4C4C, #FF7F7F); /* Red gradient */
+    /*background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -387,7 +388,7 @@ html {
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #FFD700; /* Gold button */
+    background-color: #FF0000; /* Red button */
     color: #000000; /* Black text */
     font-weight: bold;
     text-transform: uppercase;
@@ -425,7 +426,7 @@ html {
     width: 300px;
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Red shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #FFD700; /* Gold text */
+    color: #FF0000; /* Red text */
 }
 
 .service-item:hover {
@@ -467,7 +468,7 @@ html {
 }
 
 .projects-gallery figure:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.5); /* Slight zoom on hover */
     box-shadow: 0 6px 12px rgba(255, 0, 0, 0.7); /* Stronger red shadow on hover */
 }
 
@@ -475,13 +476,13 @@ html {
     width: 100%;
     height: auto;
     display: block;
-    border-bottom: 2px solid #FFD700; /* Gold border below the image */
+    border-bottom: 2px solid #FF0000; /* Red border below the image */
 }
 
 .projects-gallery figcaption {
     padding: 0.5rem;
     font-size: 1rem;
-    color: #FFD700; /* Gold text for captions */
+    color: #FF0000; /* Red text for captions */
     background: linear-gradient(135deg, #000000, #1C1C1C); /* Subtle black gradient */
     font-weight: bold;
     text-transform: uppercase;

@@ -91,6 +91,58 @@ h1, h2, h3 {
     color: black;
 }
 
+/* Dashboard Features Section */
+.dashboard-features {
+    background-color: #000; /* Black background for the section */
+    color: #fff; /* White text for contrast */
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    border: 2px solid red; /* Red border for emphasis */
+    border-radius: 8px; /* Rounded corners for a polished look */
+}
+
+.dashboard-features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: red; /* Red title for consistency with theme */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dashboard-features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Restricts width for readability */
+    text-align: left;
+}
+
+.dashboard-features li {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #fff; /* Subtle separation between items */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-features li strong {
+    color: red; /* Highlights feature names */
+}
+
+.dashboard-features li:last-child {
+    border-bottom: none; /* Removes border for the last item */
+}
+
+/* Icon Styling */
+.dashboard-features li::before {
+    content: "✔️"; /* Default checkmark for features */
+    color: red;
+    font-size: 1.5rem;
+}
+
 /* Language Options */
 .language-options {
     display: flex;

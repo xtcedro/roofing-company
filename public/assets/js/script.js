@@ -113,7 +113,6 @@ document.getElementById('signupForm')?.addEventListener('submit', async (event) 
 // Appointment Form Submission
 document.getElementById('appointmentForm')?.addEventListener('submit', async (event) => {
   event.preventDefault();
-
   const formData = {
     name: document.getElementById('name').value.trim(),
     phone: document.getElementById('phone').value.trim(),

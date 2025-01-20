@@ -874,7 +874,7 @@ html {
 }
 
 .legal-links a:hover {
-    color: #FF0000; /* Red text color on hover */
+    color: #FFFFFF; /* White text color on hover */
     text-decoration: underline; /* Adds underline on hover */
 }
 
@@ -898,8 +898,34 @@ footer a {
 }
 
 footer a:hover {
-    color: #FF0000; /* Red text on hover */
+    color: #FFFFFF; /* White text on hover */
     text-decoration: underline; /* Underline on hover */
+}
+
+/* Base Styles for the Response Message */
+.response-message {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  display: none; /* Initially hidden */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Success Message Styles */
+.response-message.success {
+  color: #155724; /* Dark green text */
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #c3e6cb; /* Subtle green border */
+}
+
+/* Error Message Styles */
+.response-message.error {
+  color: #721c24; /* Dark red text */
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Subtle red border */
 }
 
 @media (max-width: 480px) {
@@ -1016,30 +1042,4 @@ footer a:hover {
         padding: 1.5rem 1rem; /* Adjust padding */
         font-size: 1rem;
     }
-}
-
-/* Base Styles for the Response Message */
-.response-message {
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 8px;
-  display: none; /* Initially hidden */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
-
-/* Success Message Styles */
-.response-message.success {
-  color: #155724; /* Dark green text */
-  background-color: #d4edda; /* Light green background */
-  border: 1px solid #c3e6cb; /* Subtle green border */
-}
-
-/* Error Message Styles */
-.response-message.error {
-  color: #721c24; /* Dark red text */
-  background-color: #f8d7da; /* Light red background */
-  border: 1px solid #f5c6cb; /* Subtle red border */
 }

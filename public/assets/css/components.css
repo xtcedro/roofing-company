@@ -257,3 +257,36 @@ blockquote {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.projects-gallery figure {
+    max-width: 300px;
+    text-align: center;
+    background-color: #000000; /* Black background for figure */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #FFD700; /* Gold border for each figure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-gallery figure:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Stronger gold shadow on hover */
+}
+
+.projects-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #FFD700; /* Gold border below the image */
+}
+
+.projects-gallery figcaption {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #FFD700; /* Gold text for captions */
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Subtle black gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+}
+

@@ -367,6 +367,53 @@ h1, h2, h3 {
     top: 0;
 }
 
+/* Service Areas Section */
+.service-areas {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Add spacing around the content */
+    border-top: 2px solid #e0e0e0; /* Subtle top border */
+    border-bottom: 2px solid #e0e0e0; /* Subtle bottom border */
+    text-align: center; /* Center-align the content */
+}
+
+.service-areas h2 {
+    font-size: 2rem; /* Large font for the title */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Add spacing below the title */
+    font-weight: bold; /* Make the title stand out */
+}
+
+.service-areas p {
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    color: #555; /* Medium gray for text */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.service-areas ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0 auto; /* Center the list */
+    max-width: 600px; /* Restrict width for better readability */
+}
+
+.service-areas ul li {
+    font-size: 1.1rem; /* Slightly larger font for list items */
+    color: #333; /* Dark text color */
+    margin: 10px 0; /* Add spacing between list items */
+    position: relative; /* For the icon placement */
+    padding-left: 30px; /* Indent the text for the icon */
+}
+
+.service-areas ul li::before {
+    content: "🌟"; /* Add a star icon before each list item */
+    position: absolute; /* Position the icon */
+    left: 0; /* Align it to the left of the text */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    font-size: 1.2rem; /* Match icon size to text */
+    color: #ffcc00; /* Gold color for the icon */
+}
+
 footer {
     background-color: #000000; /* Pure black background */
     color: #FFD700; /* Gold text */

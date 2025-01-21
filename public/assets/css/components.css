@@ -226,3 +226,34 @@ blockquote {
     color: #FFFFFF; /* White text */
     font-style: italic;
 }
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #000000; /* Black background */
+    padding: 1.5rem;
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Gold shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #FFD700; /* Gold text */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Stronger gold shadow on hover */
+}
+
+.service-item h3 {
+    background: linear-gradient(135deg, #FFD700, #FFC400); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}

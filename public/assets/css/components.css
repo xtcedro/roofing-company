@@ -463,7 +463,6 @@ blockquote {
     color: #FFFFFF; /* White text */
     line-height: 1.5;
 }
-
 .social-links {
     margin-top: 10px;
     font-size: 1rem;
@@ -486,8 +485,8 @@ blockquote {
 }
 
 .social-icon {
-    width: 20px;
-    height: 20px;
+    width: 44px;
+    height: 44px;
     margin-right: 8px;
     vertical-align: middle;
 }
@@ -503,4 +502,3 @@ blockquote {
         width: 100%; /* 1 item per row for very small screens */
     }
 }
-

@@ -189,3 +189,258 @@ h1, h2, h3 {
     color: #CC0000; /* Darker red */
 }
 
+/* Call-to-Action Section */
+.call-to-action-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black gradient */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 4px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.call-to-action-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.call-to-action-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #FF0000; /* Red text */
+}
+
+.call-to-action-section strong {
+    color: #FF0000; /* Red for emphasis */
+}
+
+/* Content Section */
+.content-section {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Services Section */
+.services-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #000000; /* Black background */
+    color: #FF0000; /* Red text */
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.services-section p {
+    font-size: 1.2rem;
+    color: #FFFFFF; /* White text for descriptions */
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Projects Gallery */
+.projects-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #000000; /* Black background for gallery */
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); /* Red shadow */
+}
+
+.projects-gallery figure {
+    max-width: 300px;
+    text-align: center;
+    background-color: #000000; /* Black background for figure */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #FF0000; /* Red border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-gallery figure:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.7); /* Stronger shadow */
+}
+
+.projects-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #FF0000; /* Red border below the image */
+}
+
+.projects-gallery figcaption {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #FF0000; /* Red text */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.why-choose-us p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: #D0D3D4; /* Light gray */
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.why-choose-us ul li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+    color: #FFFFFF; /* White text */
+    font-weight: bold;
+}
+
+.why-choose-us ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #FF0000; /* Red */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Service Areas Section */
+.service-areas {
+    background-color: #000000; /* Black background for contrast */
+    padding: 40px 20px; /* Add spacing around the content */
+    border-top: 2px solid #FF0000; /* Red top border */
+    border-bottom: 2px solid #FF0000; /* Red bottom border */
+    text-align: center; /* Center-align the content */
+}
+
+.service-areas h2 {
+    font-size: 2rem; /* Large font for the title */
+    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent gradient */
+    margin-bottom: 20px; /* Add spacing below the title */
+    font-weight: bold; /* Make the title stand out */
+    text-transform: uppercase;
+}
+
+.service-areas p {
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    color: #FFFFFF; /* White text */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.service-areas ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0 auto; /* Center the list */
+    max-width: 600px; /* Restrict width for better readability */
+}
+
+.service-areas ul li {
+    font-size: 1.1rem; /* Slightly larger font for list items */
+    color: #FFFFFF; /* White text */
+    margin: 10px 0; /* Add spacing between list items */
+    position: relative; /* For the icon placement */
+    padding-left: 30px; /* Indent the text for the icon */
+}
+
+.service-areas ul li::before {
+    content: "🌟"; /* Add a star icon before each list item */
+    position: absolute; /* Position the icon */
+    left: 0; /* Align it to the left of the text */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    font-size: 1.2rem; /* Match icon size to text */
+    color: #FF0000; /* Red color for the icon */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black background */
+    color: #FF0000; /* Red text */
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 2px solid #FF0000; /* Red border */
+    box-shadow: 0 -2px 10px rgba(255, 0, 0, 0.4); /* Subtle shadow above */
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #FF0000; /* Red text for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFFFFF; /* White on hover */
+    text-decoration: underline;
+}

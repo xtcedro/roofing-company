@@ -1,0 +1,146 @@
+/* Mobile View Styling (max-width: 767px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem; /* Space between links */
+    }
+
+    .navbar a {
+        font-size: 0.85rem; /* Smaller font size for mobile */
+        width: 100%; /* Full-width links */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .navbar a.active {
+        border-bottom: none; /* Remove underline on active link for mobile */
+    }
+
+    .hero-section {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .hero-title {
+        font-size: 1.8rem; /* Resize title for better visibility */
+        margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1rem; /* Adjust button size for readability */
+    }
+
+    .title-banner {
+        padding: 1rem 0; /* Add spacing for mobile */
+        background-color: #f8f8f8; /* Optional: light background for contrast */
+    }
+
+    .title-banner img {
+        max-width: 100%; /* Ensure full responsiveness */
+        height: auto;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .hero-contact {
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+        margin: 1.5rem auto; /* Adjust margin for spacing */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .hero-contact h2 {
+        font-size: 1.5rem; /* Slightly smaller heading */
+    }
+
+    .hero-contact p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    .hero-contact a {
+        font-size: 1rem; /* Consistent link size */
+    }
+
+    .hero-contact {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+        margin: 1rem auto; /* Center and reduce margin */
+        max-width: 90%; /* Use most of the screen width */
+    }
+
+}
+
+/* Tablet View Adjustments (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body { font-size: 22px; /* Adjust base font size */ }
+
+    .navbar {
+        justify-content: space-between; /* Distribute navigation links evenly */
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Slightly larger font size for tablets */
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar a.active {
+        border-bottom: 2px solid #FFD700; /* Retain underline for tablets */
+    }
+
+    .hero-title {
+        font-size: 2.2rem; /* Adjust title size for tablets */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem; /* Adjust button size */
+    }
+
+    .title-banner {
+        padding: 0; /* Moderate padding for tablets */
+    }
+
+    .title-banner img {
+        width: 100vw; /* Slightly reduce image size */
+    }
+
+    .hero-contact {
+        padding: 2rem; /* Standard padding for tablets */
+        margin: 2rem auto;
+        font-size: 1rem; /* Standard paragraph size */
+    }
+
+    .hero-contact h2 {
+        font-size: 1.7rem; /* Adjust heading size */
+    }
+
+    .hero-contact p {
+        font-size: 1rem; /* Standard paragraph size */
+    }
+
+    .hero-contact a {
+        font-size: 1rem; /* Consistent link size */
+    }
+
+    .legal-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .legal-links a {
+        font-size: 12px;
+    }
+}

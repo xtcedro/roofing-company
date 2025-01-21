@@ -382,3 +382,98 @@ blockquote {
     border: 2px solid #FFD700; /* Gold border around flag */
 }
 
+.legal-links {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers items */
+    gap: 20px; /* Adds spacing between items */
+    font-size: 1rem;
+    color: #FFD700; /* Gold text color */
+}
+
+.legal-links li {
+    display: inline; /* Ensures list items are inline */
+}
+
+.legal-links a {
+    text-decoration: none; /* Removes underline */
+    color: #FFD700; /* Gold text for links */
+    font-weight: bold; /* Makes links bold */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
+}
+
+.legal-links a:hover {
+    color: #FFFFFF; /* White text color on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.features-section {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #1A1A1A; /* Dark black-gray */
+    color: #FFD700; /* Gold text for titles */
+    border-top: 2px solid #FFD700; /* Subtle gold line at the top */
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #FFD700; /* Gold for titles */
+}
+
+/* Features Container */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Feature Item */
+.feature-item {
+    width: calc(33.33% - 1rem); /* 3 items per row with spacing */
+    background-color: #2A2A2A; /* Slightly lighter background */
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.feature-item:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FFD700; /* Gold for subtitles */
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #FFFFFF; /* White text */
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-item {
+        width: calc(50% - 1rem); /* 2 items per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-item {
+        width: 100%; /* 1 item per row for very small screens */
+    }
+}
+

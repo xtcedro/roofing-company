@@ -188,3 +188,36 @@ h1, h2, h3 {
 .about-section a:hover {
     color: #D4AF37; /* Lighter gold */
 }
+
+.call-to-action-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black gradient */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 4px solid #FFD700; /* Gold border */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.call-to-action-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.call-to-action-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #FFD700; /* Gold text */
+}
+
+.call-to-action-section strong {
+    color: #FFD700; /* Gold for emphasis */
+}

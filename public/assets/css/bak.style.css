@@ -1,0 +1,1045 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text for readability */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Gold Gradient Titles */
+h1, h2, h3 {
+    background: linear-gradient(135deg, #FF0000, #FF4C4C, #FF7F7F); /* Red gradient */
+    /*background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Header Titles */
+.header-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6); /* Subtle black shadow for depth */
+}
+
+/* Language Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Prevents scrolling when the modal is open */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #000000; /* Pure black background */
+    color: #FFFFFF; /* White text */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    max-width: 400px;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+/* Modal Title */
+.modal-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.auth-button {
+    background-color: black;
+    color: red;
+    border: 2px solid red;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.auth-button:hover {
+    background-color: red;
+    color: black;
+}
+
+/* Dashboard Features Section */
+.dashboard-features {
+    background-color: #000; /* Black background for the section */
+    color: #fff; /* White text for contrast */
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    border: 2px solid red; /* Red border for emphasis */
+    border-radius: 8px; /* Rounded corners for a polished look */
+}
+
+.dashboard-features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: red; /* Red title for consistency with theme */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dashboard-features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Restricts width for readability */
+    text-align: left;
+}
+
+.dashboard-features li {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #fff; /* Subtle separation between items */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-features li strong {
+    color: red; /* Highlights feature names */
+}
+
+.dashboard-features li:last-child {
+    border-bottom: none; /* Removes border for the last item */
+}
+
+/* Icon Styling */
+.dashboard-features li::before {
+    content: "✔️"; /* Default checkmark for features */
+    color: red;
+    font-size: 1.5rem;
+}
+
+/* Language Options */
+.language-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Language Buttons */
+.language-options button {
+    background-color: #1C1C1C; /* Dark gray for buttons */
+    color: #FF0000; /* Red text */
+    padding: 1rem 1.5rem;
+    border: 2px solid #FF0000; /* Red border */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between text and flag */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hover Effect for Buttons */
+.language-options button:hover {
+    background-color: #FF0000; /* Red hover effect */
+    color: #000000; /* Black text on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Flag Icon */
+.flag-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for flags */
+    border: 2px solid #FF0000; /* Red border around flag */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #000000; /* Black background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    border-bottom: 2px solid #FF0000; /* Red border for bottom */
+}
+
+nav a {
+    color: #FF0000; /* Red text */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #000000; /* Black text on hover */
+    background-color: #FF0000; /* Red background */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center-align the links */
+    align-items: center;
+    gap: 2rem; /* Space between links */
+    background-color: #000000; /* Black background */
+    padding: 1rem 0;
+    border-bottom: 2px solid #FF0000; /* Red border at the bottom */
+    position: relative; /* For any potential positioning tweaks */
+    z-index: 10; /* Ensures it stays on top */
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2); /* Subtle red shadow for depth */
+}
+
+/* Navigation Links */
+.navbar a {
+    color: #FF0000; /* Red text for links */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded edges for links */
+}
+
+/* Hover Effect for Links */
+.navbar a:hover {
+    color: #FFFFFF; /* Black text on hover */
+    background-color: #FF0000; /* Red background on hover */
+}
+
+/* Active Link Styling */
+.navbar a.active {
+    color: #FF0000; /* Red text for active link */
+    background-color: transparent; /* No background for active link */
+    border-bottom: 2px solid #FF0000; /* Red underline for active state */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid #FF0000; /* Red border for separation */
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #FF0000; /* Red text for paragraphs */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Hero Quote Styling */
+.hero-quote {
+    font-style: italic;
+    font-size: 1.5rem; /* Slightly larger font for emphasis */
+    color: #FF0000; /* Red text */
+    padding: 1.5rem;
+    border-left: 5px solid #FF0000; /* Red border on the left */
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+.hero-quote em {
+    color: #FF0000; /* Red color for emphasized text */
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.hero-quote::before {
+    content: '“'; /* Opening quotation mark */
+    font-size: 2rem;
+    color: #FF0000; /* Red color */
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.hero-quote::after {
+    content: '”'; /* Closing quotation mark */
+    font-size: 2rem;
+    color: #FF0000; /* Red color */
+    margin-left: 5px;
+    vertical-align: bottom;
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic;
+    background-color: #1C1C1C; /* Dark gray background */
+    padding: 1.5rem;
+    border-left: 5px solid #FF0000; /* Red border */
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 2rem auto;
+    color: #FFFFFF; /* White text */
+    max-width: 700px;
+}
+
+/* Adjusted .title-banner Styling */
+.title-banner {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Optional: Set background color */
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.title-banner img {
+  display: block;
+  width: 100vw; /* Slightly reduce size */
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+html {
+ overflow-x: hidden;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Slight shadow for depth */
+    border-radius: 10px; /* Smooth corners */
+    margin: 2rem auto;
+    max-width: 900px; /* Center content */
+}
+
+.about-section h2 {
+    font-size: 2rem; /* Slightly larger for emphasis */
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent background with gradient */
+    text-transform: uppercase; /* Uniform title styling */
+    letter-spacing: 1.2px; /* Enhance readability */
+}
+
+.about-section p {
+    font-size: 1.1rem; /* Slightly larger for better readability */
+    line-height: 1.8; /* Improved spacing for readability */
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+}
+
+.about-section a {
+    color: #FFD700; /* Gold for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+    color: #FFCC33; /* Lighter gold on hover */
+}
+
+/* Content Section */
+.content-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8); /* Deep shadow for prominence */
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.2rem; /* Slightly larger for emphasis */
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Enhance readability */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Subtle text shadow for depth */
+}
+
+/* Call to Action Section */
+.call-to-action-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 4px solid #FF0000; /* Red border */
+    border-radius: 10px; /* Smooth corners */
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Deeper shadow for depth */
+}
+
+.call-to-action-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    text-transform: uppercase; /* Uniform title styling */
+    letter-spacing: 1.5px; /* Enhance readability */
+}
+
+.call-to-action-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8; /* Improved spacing */
+    color: #FFFFFF; /* White text */
+}
+
+.call-to-action-section strong {
+    color: #FF0000; /* Red for emphasis */
+}
+
+/* Call-to-Action Button */
+.call-to-action-section .cta-button,
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #FF0000; /* Red button */
+    color: #000000; /* Black text */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px; /* Smooth corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.call-to-action-section .cta-button:hover,
+.cta-button:hover {
+    background-color: #FFCC33; /* Lighter gold on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Services Section */
+.services-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #000000; /* Black background */
+    color: #FFD700; /* Gold text */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #000000; /* Black background */
+    padding: 1.5rem;
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /* Red shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #FF0000; /* Red text */
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.7); /* Stronger red shadow on hover */
+}
+
+/* Gradient Text for Titles */
+.service-item h3 {
+    background: linear-gradient(135deg, #FFD700, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Project Gallery Section */
+.projects-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #000000; /* Black background for gallery */
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); /* Red shadow for depth */
+}
+
+.projects-gallery figure {
+    max-width: 300px;
+    text-align: center;
+    background-color: #000000; /* Black background for figure */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #FF0000; /* Red border for each figure */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-gallery figure:hover {
+    transform: scale(1.5); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.7); /* Stronger red shadow on hover */
+}
+
+.projects-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #FF0000; /* Red border below the image */
+}
+
+.projects-gallery figcaption {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #FF0000; /* Red text for captions */
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Subtle black gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Deeper shadow for prominence */
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent background for gradient text */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Enhance readability */
+}
+
+.why-choose-us p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: #D0D3D4; /* Light gray for better readability */
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.why-choose-us ul li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+    color: #FFFFFF; /* White text */
+    font-weight: bold;
+}
+
+.why-choose-us ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #FFD700; /* Gold color */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0; /* Align icon to the left of the text */
+    top: 0;
+}
+
+.why-choose-us blockquote {
+    font-style: italic;
+    background-color: #1C1C1C; /* Dark gray background */
+    color: #FFD700; /* Gold text */
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-left: 5px solid #FF0000; /* Red border on the left */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.why-choose-us .cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #FFD700; /* Gold button */
+    color: #000000; /* Black text */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.why-choose-us .cta-button:hover {
+    background-color: #FFCC33; /* Lighter gold on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Appointment Form Section */
+.appointment-form-section {
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFD700; /* Gold text */
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px; /* Smooth corners */
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+}
+
+.appointment-form-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.appointment-form-section .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.appointment-form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.appointment-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.appointment-form .form-group label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #FFD700; /* Gold text */
+}
+
+.appointment-form .form-group input,
+.appointment-form .form-group select,
+.appointment-form .form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #000000; /* Black text */
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form .form-group input:focus,
+.appointment-form .form-group select:focus,
+.appointment-form .form-group textarea:focus {
+    outline: none;
+    border-color: #FFD700; /* Gold focus border */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8); /* Gold glow */
+}
+
+.appointment-form .cta-button {
+    padding: 0.75rem 2rem;
+    background-color: #FFD700; /* Gold button */
+    color: #000000; /* Black text */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.appointment-form .cta-button:hover {
+    background-color: #FFCC33; /* Lighter gold on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Appointments Section */
+.appointments-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #000000, #1C1C1C); /* Black to dark gradient */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    border: 4px solid #FF0000; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 2rem auto;
+    max-width: 1200px; /* Center and limit width */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+}
+
+.appointments-section h1 {
+    font-size: 2.5rem; /* Large title */
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent text with gradient */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase title */
+    letter-spacing: 1.5px; /* Enhanced readability */
+}
+
+.appointments-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8; /* Improved spacing for readability */
+    color: #FFD700; /* Gold for paragraphs */
+}
+
+/* Appointments Container */
+.appointments-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards to the next row */
+    gap: 2rem; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    margin-top: 2rem;
+}
+
+/* Appointment Card */
+.appointment-card {
+    background: #000000; /* Black background for cards */
+    color: #FFD700; /* Gold text */
+    padding: 1.5rem;
+    border: 2px solid #FF0000; /* Red border for separation */
+    border-radius: 8px; /* Smooth edges */
+    width: 300px; /* Fixed card width */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); /* Subtle red shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+.appointment-card h2 {
+    font-size: 1.5rem; /* Title size for cards */
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FFD700, #FFC200, #FFAA00); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent gradient */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.appointment-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #FFFFFF; /* White text for details */
+    margin-bottom: 0.5rem;
+}
+
+.appointment-card .cta-button {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #FFD700; /* Gold button */
+    color: #000000; /* Black text */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.appointment-card .cta-button:hover {
+    background-color: #FFCC33; /* Lighter gold on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Response Message Styling */
+.response-message {
+  font-size: 1rem; /* Adjust the font size */
+  font-weight: bold; /* Make the text stand out */
+  text-align: center; /* Center the message */
+  margin-top: 15px; /* Add spacing above the message */
+  padding: 10px; /* Add padding for better readability */
+  border-radius: 8px; /* Round the corners */
+  display: none; /* Initially hidden */
+}
+
+/* Success Message */
+.response-message.success {
+  color: #38a169; /* Green text for success */
+  background-color: #e6f4ea; /* Light green background */
+  border: 1px solid #38a169; /* Green border */
+}
+
+/* Error Message */
+.response-message.error {
+  color: #e53e3e; /* Red text for errors */
+  background-color: #fbeaea; /* Light red background */
+  border: 1px solid #e53e3e; /* Red border */
+}
+
+/* Legal Links */
+.legal-links {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Aligns items horizontally */
+    justify-content: center; /* Centers items */
+    gap: 1.5rem; /* Adds spacing between items */
+    font-size: 1rem; /* Sets text size to be consistent with the theme */
+    color: #FFD700; /* Gold text color for items */
+    border-top: 2px solid #FF0000; /* Red border at the top for separation */
+}
+
+.legal-links li {
+    display: inline; /* Ensures list items are inline */
+}
+
+.legal-links a {
+    text-decoration: none; /* Removes underline */
+    color: #FFD700; /* Gold text for links */
+    font-weight: bold; /* Makes links bold */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.legal-links a:hover {
+    color: #FFFFFF; /* White text color on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black background */
+    color: #FFD700; /* Gold text for footer */
+    text-align: center; /* Centers text */
+    padding: 1.5rem; /* Adds padding for spacing */
+    margin-top: 2rem; /* Adds margin at the top */
+    border-top: 4px solid #FF0000; /* Red border on top */
+    box-shadow: 0 -4px 15px rgba(255, 0, 0, 0.5); /* Subtle red shadow above */
+    font-size: 0.9rem; /* Slightly smaller font for footer text */
+}
+
+/* Footer Hover Effect */
+footer a {
+    color: #FFD700; /* Gold text for footer links */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFFFFF; /* White text on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Base Styles for the Response Message */
+.response-message {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  display: none; /* Initially hidden */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Success Message Styles */
+.response-message.success {
+  color: #155724; /* Dark green text */
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #c3e6cb; /* Subtle green border */
+}
+
+/* Error Message Styles */
+.response-message.error {
+  color: #721c24; /* Dark red text */
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Subtle red border */
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.4; /* Adjust for better readability */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Space between links */
+        padding: 1rem 0;
+    }
+
+    .navbar a {
+        font-size: 0.85rem; /* Smaller text */
+        padding: 0.5rem; /* Adjust padding */
+        text-align: center; /* Center links */
+    }
+
+    .hero-title {
+        font-size: 1.8rem; /* Reduce title size */
+    }
+
+    .hero-section p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+        line-height: 1.5;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem; /* Adjust button size */
+    }
+
+    .legal-links {
+        flex-direction: column; /* Stack links */
+        gap: 10px; /* Space between links */
+        text-align: center;
+        font-size: 0.8rem; /* Smaller text */
+    }
+
+    .legal-links a {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .title-banner img {
+        max-width: 100%; /* Ensure image fits */
+        height: auto;
+    }
+
+    .media-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-contact {
+        padding: 1rem; /* Reduce padding */
+        font-size: 0.9rem; /* Adjust size */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Slightly larger text */
+    }
+
+    .navbar {
+        justify-content: space-evenly;
+        padding: 1rem 2rem;
+    }
+
+    .navbar a {
+        font-size: 1rem; /* Standard font size */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Adjust title size */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem; /* Adjust button size */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Standard text size */
+        line-height: 1.6;
+    }
+
+    .legal-links {
+        flex-wrap: wrap; /* Wrap links for space */
+        gap: 0.5rem; /* Adjust gap */
+        font-size: 0.9rem; /* Slightly smaller size */
+    }
+
+    .legal-links a {
+        font-size: 0.9rem;
+    }
+
+    .title-banner img {
+        max-width: 90%; /* Slightly smaller */
+    }
+
+    .media-container {
+        flex-wrap: wrap;
+        gap: 1.5rem; /* Adjust spacing */
+    }
+
+    .hero-contact {
+        padding: 1.5rem 1rem; /* Adjust padding */
+        font-size: 1rem;
+    }
+}

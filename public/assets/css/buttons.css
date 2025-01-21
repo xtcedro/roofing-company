@@ -1,8 +1,8 @@
 /* Appointment Form CTA Button */
 .appointment-form .cta-button {
     padding: 0.75rem 2rem;
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
+    background-color: #FF0000; /* Red button */
+    color: #FFFFFF; /* White text */
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -12,7 +12,7 @@
 }
 
 .appointment-form .cta-button:hover {
-    background-color: #D4AF37; /* Darker gold on hover */
+    background-color: #CC0000; /* Darker red on hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
@@ -21,8 +21,8 @@
     display: block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
+    background-color: #FF0000; /* Red button */
+    color: #FFFFFF; /* White text */
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -31,14 +31,14 @@
 }
 
 .appointment-card .cta-button:hover {
-    background-color: #D4AF37; /* Darker gold on hover */
+    background-color: #CC0000; /* Darker red on hover */
     transform: scale(1.05); /* Slight zoom */
 }
 
 /* Call-to-Action Section Button */
 .call-to-action-section .cta-button {
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
+    background-color: #FF0000; /* Red button */
+    color: #FFFFFF; /* White text */
     padding: 0.75rem 2rem;
     font-size: 1rem;
     font-weight: bold;
@@ -49,7 +49,7 @@
 }
 
 .call-to-action-section .cta-button:hover {
-    background-color: #FF0000; /* Red on hover */
+    background-color: #CC0000; /* Darker red on hover */
     transform: scale(1.05);
 }
 
@@ -57,8 +57,8 @@
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
+    background-color: #FF0000; /* Red button */
+    color: #FFFFFF; /* White text */
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
@@ -66,7 +66,7 @@
 }
 
 .cta-button:hover {
-    background-color: #D4AF37; /* Darker gold on hover */
+    background-color: #CC0000; /* Darker red on hover */
     transform: scale(1.05);
 }
 
@@ -75,8 +75,8 @@
     display: inline-block;
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
+    background-color: #FF0000; /* Red button */
+    color: #FFFFFF; /* White text */
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
@@ -85,7 +85,7 @@
 }
 
 .why-choose-us .cta-button:hover {
-    background-color: #D4AF37; /* Darker gold on hover */
+    background-color: #CC0000; /* Darker red on hover */
     transform: scale(1.05);
 }
 
@@ -101,21 +101,21 @@
     padding: 0.75em 1.5em;
     border-radius: 5px;
     text-decoration: none;
-    background-color: #FFD700; /* Gold button */
-    color: #000000; /* Black text */
+    background-color: #FF0000; /* Red button */
+    color: #FFFFFF; /* White text */
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .auth-buttons .cta-button.secondary {
-    background-color: #FF0000; /* Red for secondary button */
+    background-color: #000000; /* Black for secondary button */
     color: #FFFFFF; /* White text */
 }
 
 .auth-buttons .cta-button:hover {
-    background-color: #D4AF37; /* Darker gold on hover */
+    background-color: #CC0000; /* Darker red on hover */
 }
 
 .auth-buttons .cta-button.secondary:hover {
-    background-color: #CC0000; /* Darker red on hover */
+    background-color: #333333; /* Darker black on hover */
 }

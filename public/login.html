@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Login | Heavenly Roofing Company</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/auth-navigation.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your Heavenly Roofing account.">
+    <title>Login | Heavenly Roofing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/auth-navigation.js" defer></script>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
         <div class="title-banner">
-            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing - Oklahoma City’s Trusted Roofing Experts">
+            <img src="assets/images/banner1.png" alt="Heavenly Roofing - Login">
         </div>
     </header>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="index.html">🏠 Home</a>
-        <a href="about.html">📖 About Us</a>
-        <a href="services.html">🛠️ Services</a>
-        <a href="gallery.html">🖼️ Gallery</a>
-        <a href="projects.html">🚧 Projects</a>
-        <a href="appointments.html">📅 Submit Appointments</a>
-        <a href="view-appointments.html">👀 View Appointments</a>
-        <a href="contact.html">📬 Contact Us</a>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">💳 Secure Payment Portal 🌟</h1>
+        <h1 class="hero-title">🔑 Login to Your Account 🌟</h1>
         <blockquote class="hero-quote">
-            💡 <em>"Easily manage and process your appointments and payments with confidence!"</em> 🏡
+            🏡 <em>"Access your account with Heavenly Roofing!"</em> 🌟
         </blockquote>
     </section>
 
     <!-- Main Content -->
     <main>
-        <!-- Payment Login Section -->
-        <section class="appointment-section">
-            <h2 class="section-title">🔑 Login to Your Payment Portal</h2>
+        <section class="appointments-section">
+            <h2 class="section-title">🔐 Login 🚀</h2>
             <form class="appointment-form" id="loginForm">
                 <div class="form-group">
-                    <label for="email">Email Address:</label>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com" required>
                 </div>
 
@@ -54,22 +45,16 @@
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
 
-                <div class="form-actions">
-                    <button type="submit" class="cta-button">Login</button>
-                    <button type="button" class="cta-button" onclick="location.href='forgotpassword.html'">Forgot Password</button>
-                </div>
+                <button type="submit" class="cta-button">Login</button>
+                <p id="responseMessage"></p>
             </form>
-
-            <div class="create-account">
-                <p>Don’t have an account?</p>
-                <a href="register.html" class="cta-button secondary">Create Account</a>
-            </div>
+            <a href="forgot-password.html" class="cta-button secondary-button">Forgot Password?</a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Heavenly Roofing. 🌟 Built with ❤️ in Oklahoma City. All rights reserved.</p>
+        <p>&copy; 2025 Heavenly Roofing. 🌟 Built with ❤️ in Oklahoma City 🌆. All rights reserved.</p>
         <nav class="legal-links">
             <a href="legal/terms.html">📝 Terms and Conditions</a>
             <a href="legal/privacy.html">🔒 Privacy Policy</a>
@@ -81,6 +66,7 @@
         </nav>
     </footer>
 
+    <!-- JavaScript -->
     <script src="assets/js/auth.js" defer></script>
 </body>
 </html>

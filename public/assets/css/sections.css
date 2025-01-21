@@ -267,3 +267,46 @@ h1, h2, h3 {
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
+
+.projects-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #000000; /* Black background for gallery */
+    border: 2px solid #FFD700; /* Gold border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); /* Gold shadow */
+}
+
+.projects-gallery figure {
+    max-width: 300px;
+    text-align: center;
+    background-color: #000000; /* Black background for figure */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #FFD700; /* Gold border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-gallery figure:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.7); /* Stronger shadow */
+}
+
+.projects-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #FFD700; /* Gold border below the image */
+}
+
+.projects-gallery figcaption {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #FFD700; /* Gold text */
+    font-weight: bold;
+    text-transform: uppercase; 10
+}

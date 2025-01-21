@@ -1,6 +1,6 @@
 const API_BASE_URL = window.location.origin.includes('localhost')
   ? 'http://localhost:3000'
-  : 'https://www.domingueztechsolutions.com';
+  : 'https://www.heavenlyroofingok.com';
 
 // Attach an event listener to the form submission
 document.getElementById('appointmentForm').addEventListener('submit', async (event) => {

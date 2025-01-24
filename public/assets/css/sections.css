@@ -102,173 +102,438 @@ h1, h2, h3 {
     align-items: center;
     gap: 2rem;
     background-color: #000000; /* Black background */
-    padding: 1rem 0;
-    border-bottom: 2px solid #FF0000; /* Red border */
-    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2); /* Subtle shadow */
+    padding: 1.5rem 0; /* Increased padding for better spacing */
+    border-bottom: 3px solid #FF0000; /* Thicker red border for prominence */
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.25); /* Enhanced shadow for depth */
+    position: sticky; /* Stick navbar at the top */
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .navbar a {
     color: #FF0000; /* Red text */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700; /* Stronger emphasis on text */
     text-transform: uppercase;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px; /* Smooth edges */
-    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1rem; /* Slightly larger font for readability */
+    padding: 0.7rem 1.2rem; /* More balanced padding */
+    border-radius: 8px; /* Smoother, modern edges */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar a:hover {
     color: #FFFFFF; /* White text on hover */
     background-color: #FF0000; /* Red background */
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* Add shadow on hover */
 }
 
 .navbar a.active {
-    color: #FF0000; /* Red text for active link */
-    border-bottom: 2px solid #FF0000; /* Red underline */
+    color: #FFFFFF; /* White text for active link */
+    background-color: #FF0000; /* Red background for active link */
+    border-bottom: 3px solid #FFFFFF; /* White underline for active link */
 }
 
 /* Hero Section */
 .hero-section {
     background-color: #000000; /* Black background */
     color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
+    padding: 5rem 2rem; /* Larger padding for a grand appearance */
     text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide any overflow for a cleaner look */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(153, 0, 0, 0.3));
+    z-index: 0;
+    opacity: 0.5; /* Subtle overlay for modern style */
+    pointer-events: none;
 }
 
 .hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: #FF0000; /* Red text */
+    font-size: 1.3rem; /* Slightly larger font for readability */
+    margin-bottom: 2rem; /* Increase spacing below the paragraph */
+    color: #FF4D4D; /* Brighter red for attention */
+    z-index: 1; /* Ensure text is above the overlay */
+    position: relative;
 }
 
 .hero-title {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    font-size: 4rem; /* Larger font for more impact */
+    margin-bottom: 1.5rem; /* Increase spacing below the title */
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000); /* Brighter red gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    font-weight: 900; /* Extra bold for strong emphasis */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px; /* Wider spacing for elegance */
+    z-index: 1; /* Ensure title is above the overlay */
+    position: relative;
+}
+
+/* Optional: Add subtle animation for hero title */
+.hero-title {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* About Section */
 .about-section {
     background: linear-gradient(135deg, #000000, #1C1C1C); /* Black gradient */
     color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
+    padding: 4rem 2rem; /* Increased padding for a spacious look */
     text-align: center;
     border: 4px solid #FF0000; /* Red border */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 900px;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2); /* Enhanced shadow for depth */
+    border-radius: 15px; /* Smooth, modern edges */
+    margin: 3rem auto; /* Increase spacing above and below */
+    max-width: 800px; /* Restrict width for better readability */
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+    animation: rotateGlow 10s linear infinite; /* Subtle rotating glow */
 }
 
 .about-section h2 {
-    font-size: 1.8rem;
-    color: #FF0000; /* Red for titles */
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Larger font for emphasis */
+    color: #FF4D4D; /* Brighter red for better impact */
+    margin-bottom: 1.5rem; /* Add spacing below the title */
+    text-transform: uppercase; /* Professional touch */
+    letter-spacing: 1.5px; /* Slightly spaced-out letters for elegance */
+    font-weight: 900; /* Extra bold for prominence */
+    z-index: 1; /* Ensure text is above the overlay */
+    position: relative;
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    animation: fadeInDown 1s ease-out; /* Smooth entrance animation */
 }
 
 .about-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem; /* Slightly larger font for readability */
+    line-height: 1.8; /* Increase line height for better readability */
+    color: #E0E0E0; /* Softer white for reduced eye strain */
+    margin-bottom: 2rem; /* Increased spacing below paragraphs */
+    max-width: 700px; /* Restrict width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1; /* Ensure text is above the overlay */
+    position: relative;
 }
 
 .about-section a {
-    color: #FF0000; /* Red links */
+    color: #FF4D4D; /* Brighter red for links */
     font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline for a cleaner look */
+    padding: 0.5rem 1rem; /* Add padding for better clickability */
+    border: 2px solid #FF4D4D; /* Border to emphasize the link */
+    border-radius: 5px; /* Rounded edges for modern design */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    position: relative;
 }
 
 .about-section a:hover {
-    color: #CC0000; /* Darker red */
+    color: #FFFFFF; /* Change text to white on hover */
+    background-color: #FF4D4D; /* Add a red background */
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4); /* Add shadow on hover */
+}
+
+/* Animations */
+@keyframes rotateGlow {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Call-to-Action Section */
 .call-to-action-section {
     background: linear-gradient(135deg, #000000, #1C1C1C); /* Black gradient */
     color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
+    padding: 4rem 2rem; /* Increased padding for a spacious layout */
     text-align: center;
-    border-top: 4px solid #FF0000; /* Red border */
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 900px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    border-top: 5px solid #FF0000; /* Thicker red border for emphasis */
+    border-radius: 15px; /* Smoother edges for a modern look */
+    margin: 3rem auto; /* Increased spacing above and below */
+    max-width: 800px; /* Restrict width for better readability */
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2); /* Enhanced shadow for depth */
+    position: relative;
+    overflow: hidden; /* Hide overflow for decorative elements */
+}
+
+.call-to-action-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.2), transparent);
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none; /* Prevent interaction with the effect */
+    animation: pulseGlow 6s infinite ease-in-out; /* Subtle glowing animation */
 }
 
 .call-to-action-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    font-size: 3rem; /* Larger font size for impact */
+    margin-bottom: 2rem; /* Increased spacing below the title */
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000); /* Brighter red gradient */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    font-weight: 900; /* Extra bold for prominence */
     text-transform: uppercase;
+    letter-spacing: 1.5px; /* Slight spacing for elegance */
+    z-index: 1; /* Ensure content is above the glow */
+    position: relative;
+    animation: fadeInUp 1s ease-out; /* Smooth entrance animation */
 }
 
 .call-to-action-section p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    color: #FF0000; /* Red text */
+    font-size: 1.4rem; /* Slightly larger font for readability */
+    margin-bottom: 2rem; /* Increased spacing below paragraphs */
+    line-height: 1.8; /* Improved readability */
+    color: #E0E0E0; /* Softer white for contrast */
+    max-width: 700px; /* Restrict width for better focus */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    position: relative;
 }
 
 .call-to-action-section strong {
-    color: #FF0000; /* Red for emphasis */
+    color: #FF4D4D; /* Brighter red for emphasis */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add subtle interactivity */
+}
+
+.call-to-action-section strong:hover {
+    color: #FFFFFF; /* Highlight white text on hover */
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Animations */
+@keyframes pulseGlow {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Content Section */
 .content-section {
-    background-color: #000000; /* Black background */
+    background: linear-gradient(135deg, #000000, #1A1A1A); /* Slight gradient for depth */
     color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
-    margin: 2rem auto;
-    max-width: 1200px;
-    border: 4px solid #FF0000; /* Red border */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    padding: 4rem 2rem; /* Increased padding for a spacious layout */
+    margin: 3rem auto; /* Larger spacing for separation */
+    max-width: 1000px; /* Slightly reduced max-width for better readability */
+    border: 5px solid #FF0000; /* Thicker red border for emphasis */
+    border-radius: 15px; /* Smoother, modern edges */
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3); /* Enhanced shadow with red tint */
     text-align: center;
+    position: relative;
+    overflow: hidden; /* For decorative elements */
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none; /* Decorative glow */
+    animation: pulseGlow 8s infinite ease-in-out; /* Subtle glowing effect */
 }
 
 .content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    font-size: 2.5rem; /* Larger font size for a bolder impact */
+    margin-bottom: 2rem; /* Increased spacing below the heading */
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000); /* Brighter red gradient */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    font-weight: 900; /* Extra bold for emphasis */
     text-transform: uppercase;
+    letter-spacing: 1.5px; /* Slight spacing for elegance */
+    z-index: 1; /* Ensure heading is above glow effect */
+    position: relative;
+    animation: fadeInDown 1s ease-out; /* Smooth entrance animation */
+}
+
+.content-section p {
+    font-size: 1.3rem; /* Larger font for readability */
+    line-height: 1.8; /* Improve readability for longer content */
+    color: #E0E0E0; /* Softer white for reduced eye strain */
+    margin-bottom: 2rem; /* Consistent spacing below paragraphs */
+    max-width: 800px; /* Restrict paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1; /* Ensure text is above glow effect */
+    position: relative;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Services Section */
 .services-section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem; /* Increase padding for a more spacious layout */
     text-align: center;
     background-color: #000000; /* Black background */
     color: #FF0000; /* Red text */
+    position: relative;
+    overflow: hidden; /* For decorative effects */
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.2), transparent 70%);
+    z-index: 0;
+    pointer-events: none; /* Prevent interaction with the overlay */
 }
 
 .services-section h2 {
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    font-size: 3rem; /* Larger font size for a bold impact */
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000); /* Brighter red gradient */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
+    -webkit-text-fill-color: transparent; /* Text gradient effect */
+    margin-bottom: 2rem; /* Increase spacing below the title */
+    font-weight: 900; /* Extra bold for emphasis */
     text-transform: uppercase;
+    letter-spacing: 1.5px; /* Add spacing for elegance */
+    position: relative;
+    z-index: 1; /* Ensure text appears above the overlay */
+    animation: fadeInDown 1s ease-out; /* Subtle entrance animation */
 }
 
 .services-section p {
-    font-size: 1.2rem;
-    color: #FFFFFF; /* White text for descriptions */
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    font-size: 1.3rem; /* Slightly larger font for readability */
+    color: #E0E0E0; /* Light gray text for better contrast */
+    line-height: 1.8; /* Improve readability */
+    margin-bottom: 2rem; /* Increase spacing below paragraphs */
+    max-width: 800px; /* Restrict width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Add hover effect for interactivity */
+.services-section p:hover {
+    color: #FF4D4D; /* Highlight text color on hover */
+    transition: color 0.3s ease;
+}
+
+/* Decorative Animation */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Projects Gallery */
@@ -319,107 +584,182 @@ h1, h2, h3 {
 .why-choose-us {
     background-color: #000000; /* Black background */
     color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
+    padding: 4rem 2rem; /* Add more padding for a spacious look */
     text-align: center;
     border: 4px solid #FF0000; /* Red border */
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 1200px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    border-radius: 15px; /* Slightly smoother corners */
+    margin: 3rem auto; /* Add more spacing above and below */
+    max-width: 1000px; /* Restrict width for better readability */
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2); /* Enhanced shadow for depth */
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-us::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), transparent);
+    z-index: 0; /* Behind content */
+    pointer-events: none; /* Non-interactive */
+    animation: rotateGlow 8s linear infinite; /* Subtle animation */
 }
 
 .why-choose-us h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    font-size: 3rem; /* Larger font size for more impact */
+    margin-bottom: 2rem; /* Increased spacing below the title */
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000); /* Brighter red gradient */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    font-weight: 900; /* Extra bold for emphasis */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px; /* Slightly more spacing for elegance */
+    z-index: 1;
+    position: relative;
+    animation: fadeInUp 1s ease-out; /* Entrance animation */
 }
 
 .why-choose-us p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    line-height: 1.8;
-    color: #D0D3D4; /* Light gray */
+    font-size: 1.3rem; /* Slightly larger font for readability */
+    margin-bottom: 2.5rem; /* Increased spacing below paragraphs */
+    line-height: 1.8; /* Improved readability */
+    color: #E0E0E0; /* Softer gray for better contrast */
+    max-width: 800px; /* Restrict width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    position: relative;
 }
 
+/* List Styling */
 .why-choose-us ul {
-    list-style: none;
+    list-style: none; /* Remove default bullets */
     padding: 0;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 800px; /* Restrict width for better focus */
     text-align: left;
+    z-index: 1;
+    position: relative;
 }
 
 .why-choose-us ul li {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    padding-left: 2.5rem;
+    margin-bottom: 1.5rem; /* Increased spacing between list items */
+    font-size: 1.3rem; /* Slightly larger font */
+    padding-left: 3rem; /* Extra padding for icons */
     position: relative;
     color: #FFFFFF; /* White text */
     font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add hover effects */
+}
+
+.why-choose-us ul li:hover {
+    color: #FF4D4D; /* Highlight text on hover */
+    transform: translateX(5px); /* Subtle shift for interactivity */
 }
 
 .why-choose-us ul li::before {
     content: "✔"; /* Checkmark symbol */
     color: #FF0000; /* Red */
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Slightly larger checkmark */
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    transition: transform 0.3s ease, color 0.3s ease; /* Hover effect for icon */
+}
+
+.why-choose-us ul li:hover::before {
+    color: #FF4D4D; /* Highlight icon on hover */
+    transform: translate(-5px, -50%) scale(1.2); /* Slight bounce effect */
+}
+
+/* Animations */
+@keyframes rotateGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Service Areas Section */
 .service-areas {
     background-color: #000000; /* Black background for contrast */
-    padding: 40px 20px; /* Add spacing around the content */
-    border-top: 2px solid #FF0000; /* Red top border */
-    border-bottom: 2px solid #FF0000; /* Red bottom border */
+    padding: 50px 30px; /* Increase spacing for a more open layout */
+    border-top: 4px solid #FF0000; /* Slightly thicker red top border */
+    border-bottom: 4px solid #FF0000; /* Slightly thicker red bottom border */
     text-align: center; /* Center-align the content */
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2); /* Add a subtle red shadow for depth */
 }
 
 .service-areas h2 {
-    font-size: 2rem; /* Large font for the title */
-    background: linear-gradient(135deg, #FF0000, #CC0000, #990000); /* Red gradient */
+    font-size: 2.5rem; /* Larger font for the title */
+    background: linear-gradient(135deg, #FF4D4D, #CC0000, #990000); /* Brighter red gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent gradient */
-    margin-bottom: 20px; /* Add spacing below the title */
-    font-weight: bold; /* Make the title stand out */
-    text-transform: uppercase;
+    margin-bottom: 25px; /* Add more spacing below the title */
+    font-weight: 900; /* Extra bold for better emphasis */
+    text-transform: uppercase; /* Keep it professional and bold */
+    letter-spacing: 2px; /* Add spacing between letters for elegance */
 }
 
 .service-areas p {
-    font-size: 1.2rem; /* Slightly larger font for readability */
-    color: #FFFFFF; /* White text */
-    margin-bottom: 20px; /* Space below the paragraph */
+    font-size: 1.3rem; /* Slightly larger font for readability */
+    color: #E0E0E0; /* Light gray for softer contrast */
+    margin-bottom: 25px; /* Increase spacing below the paragraph */
+    line-height: 1.6; /* Improve readability with better line spacing */
 }
 
 .service-areas ul {
     list-style-type: none; /* Remove default list styling */
     padding: 0; /* Remove padding */
     margin: 0 auto; /* Center the list */
-    max-width: 600px; /* Restrict width for better readability */
+    max-width: 650px; /* Slightly wider width for better balance */
 }
 
 .service-areas ul li {
-    font-size: 1.1rem; /* Slightly larger font for list items */
+    font-size: 1.2rem; /* Slightly larger font for list items */
     color: #FFFFFF; /* White text */
-    margin: 10px 0; /* Add spacing between list items */
+    margin: 12px 0; /* Add more spacing between list items */
     position: relative; /* For the icon placement */
-    padding-left: 30px; /* Indent the text for the icon */
+    padding-left: 35px; /* Add more space for the icon */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add hover effects */
+}
+
+.service-areas ul li:hover {
+    transform: translateX(5px); /* Slight animation on hover for interactivity */
+    color: #FF4D4D; /* Highlight the text color on hover */
 }
 
 .service-areas ul li::before {
-    content: "🌟"; /* Add a star icon before each list item */
+    content: "⭐"; /* Replace star icon with a more professional one */
     position: absolute; /* Position the icon */
     left: 0; /* Align it to the left of the text */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust for perfect centering */
-    font-size: 1.2rem; /* Match icon size to text */
+    font-size: 1.5rem; /* Increase icon size for better visibility */
     color: #FF0000; /* Red color for the icon */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add hover effects */
+}
+
+.service-areas ul li:hover::before {
+    transform: translateY(-50%) scale(1.2); /* Enlarge icon slightly on hover */
+    color: #FF4D4D; /* Change icon color on hover */
 }
 
 /* Footer */

@@ -105,7 +105,7 @@ h1, h2, h3 {
     padding: 1.5rem 0; /* Increased padding for better spacing */
     border-bottom: 3px solid #FF0000; /* Thicker red border for prominence */
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.25); /* Enhanced shadow for depth */
-    position: sticky; /* Stick navbar at the top */
+    position: relative;
     top: 0;
     z-index: 1000; /* Ensure it stays above other elements */
 }

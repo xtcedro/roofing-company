@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Register your account with Heavenly Roofing.">
+    <meta name="description" content="Create your account with Heavenly Roofing.">
     <title>Register | Heavenly Roofing</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -11,6 +11,7 @@
     <script src="../assets/js/load-components.js" defer></script>
     <script src="../assets/js/auth.js" defer></script>
 </head>
+
 <body>
 
     <!-- Include Header -->
@@ -22,24 +23,24 @@
     <section class="attention-section">
         <p>
         ⚠️ These features are still under development. While you can create an
-        account, log in, submit, and view appointments, <strong>all accounts and appointments will be deleted on February 1st, 2025</strong>
-        when the next features, including <strong>email verification</strong> and
-        <strong>password recovery</strong>, go live. Thank you for your understanding! 😊
+        account, log in, and manage your appointments, <strong>all accounts and appointments will be deleted on February 1st, 2025</strong>
+        as we prepare to launch additional features like <strong>email verification</strong> and
+        <strong>password recovery</strong>. Thank you for your patience! 😊
         </p>
     </section>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">🔐 Create Your Account 🌟</h1>
+        <h1 class="hero-title">🛠️ Create Your Account 🏠</h1>
         <blockquote class="hero-quote">
-            🏡 <em>"Secure your roof and peace of mind with Heavenly Roofing!"</em> 🌟
+            💡 <em>"Join the Heavenly Roofing family today!"</em> 🌟
         </blockquote>
     </section>
 
     <!-- Main Content -->
     <main>
         <section class="appointments-section">
-            <h2 class="section-title">📝 Register 🚀</h2>
+            <h2 class="section-title">📝 Register 🌟</h2>
             <form class="appointment-form" id="registerForm">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
@@ -61,12 +62,23 @@
                     <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
                 </div>
 
+                <!-- Legal Notice -->
+                <div class="legal-notice">
+                    <p>
+                        By registering, you agree to our
+                        <a href="terms.html" target="_blank">Terms and Conditions</a>.
+                    </p>
+                </div>
+
                 <button type="submit" class="cta-button">Register</button>
                 <p id="responseMessage"></p>
             </form>
+            <div class="create-account-section">
+                <p class="create-account-text">Already have an account? Login now!</p>
+                <a href="login.html" class="cta-button secondary-button">Login to Your Account</a>
+            </div>
         </section>
     </main>
-
 
     <!-- Include Footer -->
     <div id="footer"></div>

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="services.html">🛠️ Services</a>
             <a href="register.html">📝 Register</a>
             <a href="login.html">🔑 Login</a>
+            <a href="contact.html">📬 Contact Us</a>
         `;
     }
 

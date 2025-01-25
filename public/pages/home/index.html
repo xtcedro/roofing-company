@@ -6,45 +6,10 @@
     <meta name="description" content="Looking for the best roofing company in Oklahoma City? Heavenly Roofing offers premium roofing services, including repairs, installations, and storm protection. Call us today!">
     <meta name="keywords" content="roofing company, Oklahoma City roofing, roof repairs, roof installation, storm protection, local roofing experts">
     <title>Roofing Company in Oklahoma City - Heavenly Roofing Experts 🌟</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/auth-navigation.js" defer></script>
-    <script>
-        function setLanguage(lang) {
-            if (lang === 'es') {
-                window.location.href = 'index_es.html';
-            } else {
-                document.getElementById('language-modal').style.display = 'none';
-            }
-        }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Heavenly Roofing",
-        "description": "Heavenly Roofing provides expert roofing services in Oklahoma City, specializing in roof repair, installation, and storm damage solutions.",
-        "url": "https://www.heavenlyroofingok.com",
-        "telephone": "+1-555-555-5555",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Roofing Lane",
-            "addressLocality": "Oklahoma City",
-            "addressRegion": "OK",
-            "postalCode": "73118",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "35.4676",
-            "longitude": "-97.5164"
-        },
-        "openingHours": "Mo-Fr 08:00-18:00",
-        "sameAs": [
-            "https://www.facebook.com/HeavenlyRoofingOK",
-            "https://www.twitter.com/HeavenlyRoofingOK"
-        ]
-    }
-    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/auth-navigation.js" defer></script>
+    <script src="../assets/js/load-components.js" defer></script>
+    <script src="../assets/js/language-selection.js" defer></script>
 </head>
 <body>
     <!-- Language Selection Modal -->
@@ -62,25 +27,12 @@
         </div>
     </div>
 
-    <!-- Header Section -->
-    <header>
-        <h1 class="header-title">🏠 Heavenly Roofing 🌟</h1>
-        <div class="title-banner">
-            <img src="assets/images/heavenly-banner.png" alt="Heavenly Roofing banner showcasing roofing solutions in Oklahoma City">
-        </div>
-    </header>
+    <!-- Include Header -->
+    <div id="header"></div>
 
-    <!-- Desktop Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="active">🏠 Home</a>
-        <a href="about.html">📖 About Us</a>
-        <a href="services.html">🛠️ Services</a>
-        <a href="gallery.html">🖼️ Gallery</a>
-        <a href="projects.html">🚧 Projects</a>
-        <a href="appointments.html">📅 Submit Appointments</a>
-        <a href="view-appointments.html">👀 View Appointments</a>
-        <a href="contact.html">📬 Contact Us</a>
-    </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar"></nav>
+
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -140,9 +92,9 @@
     <section id="about-section" class="about-section">
     <h2>🏠 Join the Heavenly Roofing Community 🌟</h2>
     <p>
-        Discover why homeowners trust Heavenly Roofing for their roofing needs. 
-        Create an account to request quotes, manage appointments, and stay updated 
-        on our exclusive offers! Members also get exclusive access to a stunning gallery of 
+        Discover why homeowners trust Heavenly Roofing for their roofing needs.
+        Create an account to request quotes, manage appointments, and stay updated
+        on our exclusive offers! Members also get exclusive access to a stunning gallery of
         roofing images generated using Artificial Intelligence, offering inspiration for your next project.
     </p>
     <div class="auth-buttons">
@@ -151,28 +103,8 @@
     </div>
     </section>
 
+    <!-- Include Footer -->
+    <div id="footer"></div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Heavenly Roofing. 🌟 Built with ❤️ in Oklahoma City. All rights reserved.</p>
-        <nav class="legal-links">
-            <a href="legal/terms.html">📝 Terms and Conditions</a>
-            <a href="legal/privacy.html">🔒 Privacy Policy</a>
-            <a href="legal/disclaimer.html">⚠️ Disclaimer</a>
-            <a href="legal/warranty.html">📜 Warranty Policy</a>
-            <a href="legal/refund.html">💵 Refund Policy</a>
-            <a href="legal/accessibility.html">♿ Accessibility Statement</a>
-            <a href="legal/cookies.html">🍪 Cookie Policy</a>
-        </nav>
-        <p class="social-links">
-            Connect with us on:
-            <a href="https://www.facebook.com/share/15Zdf4DrSy/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="social-link facebook-link">
-               <img src="assets/images/facebook-icon.png" alt="Facebook" class="social-icon"> Facebook
-            </a>
-        </p>
-    </footer>
 </body>
 </html>

@@ -271,6 +271,36 @@ h1, h2, h3 {
     box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4); /* Add shadow on hover */
 }
 
+/* Attention Paragraph */
+.attention-section p {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    line-height: 1.8; /* Improved line spacing */
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    color: #FF0000; /* Bright red for attention */
+    animation: fadeIn 1.5s ease-out; /* Smooth fade-in effect */
+}
+
+/* Links */
+.attention-section a {
+    color: #FF4500; /* Orange-red for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Button-like feel */
+    border: 2px solid #FF4500; /* Bold red border */
+    border-radius: 5px; /* Rounded corners for the link */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Makes the link stand out */
+    margin-top: 1rem;
+}
+
+.attention-section a:hover {
+    color: #FFFFFF; /* White text */
+    background-color: #FF4500; /* Orange-red background */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
 /* Animations */
 @keyframes rotateGlow {
     0% {
@@ -686,7 +716,7 @@ h1, h2, h3 {
     }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
     from {
         transform: translateY(20px);
         opacity: 0;

@@ -11,7 +11,9 @@
     <script src="../assets/js/load-components.js" defer></script>
     <script src="../assets/js/auth.js" defer></script>
 </head>
+
 <body>
+
     <!-- Include Header -->
     <div id="header"></div>
 
@@ -21,24 +23,24 @@
     <section class="attention-section">
         <p>
         ⚠️ These features are still under development. While you can create an
-        account, log in, submit, and view appointments, <strong>all accounts and appointments will be deleted on February 1st, 2025</strong>
-        when the next features, including <strong>email verification</strong> and
-        <strong>password recovery</strong>, go live. Thank you for your understanding! 😊
+        account, log in, and manage appointments, <strong>all accounts and appointments will be reset on February 1st, 2025</strong>
+        to prepare for additional features such as <strong>email verification</strong> and
+        <strong>password recovery</strong>. Thank you for your patience! 😊
         </p>
     </section>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">🔑 Login to Your Account 🌟</h1>
+        <h1 class="hero-title">🔑 Login to Your Heavenly Roofing Account 🏠</h1>
         <blockquote class="hero-quote">
-            🏡 <em>"Access your account with Heavenly Roofing!"</em> 🌟
+            💡 <em>"Access your account with ease and manage your appointments today!"</em> 🌟
         </blockquote>
     </section>
 
     <!-- Main Content -->
     <main>
         <section class="appointments-section">
-            <h2 class="section-title">🔐 Login 🚀</h2>
+            <h2 class="section-title">🔐 Login 🌟</h2>
             <form class="appointment-form" id="loginForm">
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -50,15 +52,28 @@
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
 
+                <!-- Legal Notice -->
+                <div class="legal-notice">
+                    <p>
+                        By logging in, you agree to our
+                        <a href="terms.html" target="_blank">Terms and Conditions</a>.
+                    </p>
+                </div>
+
                 <button type="submit" class="cta-button">Login</button>
                 <p id="responseMessage"></p>
             </form>
-            <a href="forgot-password.html" class="cta-button secondary-button">Forgot Password?</a>
+            <a href="forget-password.html" class="cta-button secondary-button">Forgot Password?</a>
+
+            <div class="create-account-section">
+                <p class="create-account-text">Don't have an account? Create one today!</p>
+                <a href="register.html" class="cta-button secondary-button">Create an Account</a>
+            </div>
         </section>
     </main>
 
-
     <!-- Include Footer -->
     <div id="footer"></div>
+
 </body>
 </html>

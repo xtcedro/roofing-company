@@ -267,6 +267,87 @@ blockquote {
     border-bottom: 4px solid #FF0000; /* Red border below the image */
 }
 
+
+/* Features Container */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Feature Item */
+.feature-item {
+    width: calc(33.33% - 1rem); /* 3 items per row with spacing */
+    background-color: #2A2A2A; /* Slightly lighter background */
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.feature-item:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 12px rgba(255, 0, 0, 0.5); /* Enhance red shadow on hover */
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FF0000; /* Red for subtitles */
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #FFFFFF; /* White text */
+    line-height: 1.5;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF0000; /* Red text */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: #330000; /* Dark red hover effect */
+    transform: scale(1.05);
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-item {
+        width: calc(50% - 1rem); /* 2 items per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-item {
+        width: 100%; /* 1 item per row for very small screens */
+    }
+}
+
 /* Media Container */
 .media-container {
     display: flex;
@@ -406,6 +487,23 @@ blockquote {
     max-width: 800px;
 }
 
+.legal-notice {
+    font-size: 0.9rem; /* Adjust the font size for readability */
+    color: #333; /* Neutral text color */
+    text-align: center; /* Center-align the content */
+    margin: 20px 0; /* Add spacing above and below the div */
+}
+
+.legal-notice a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.legal-notice a:hover {
+    text-decoration: underline; /* Add underline on hover for emphasis */
+    color: #0056b3; /* Slightly darker blue on hover */
+}
+
 /* Legal Links */
 .legal-links {
     list-style-type: none; /* Removes default bullet points */
@@ -434,100 +532,4 @@ blockquote {
     text-decoration: underline; /* Adds underline on hover */
 }
 
-/* Features Section */
-.features-section {
-    width: 100%;
-    padding: 2rem 1rem;
-    text-align: center;
-    background-color: #1A1A1A; /* Dark black-gray */
-    color: #FF0000; /* Red text for titles */
-    border-top: 2px solid #FF0000; /* Subtle red line at the top */
-}
 
-.features-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    color: #FF0000; /* Red for titles */
-}
-
-/* Features Container */
-.features-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-/* Feature Item */
-.feature-item {
-    width: calc(33.33% - 1rem); /* 3 items per row with spacing */
-    background-color: #2A2A2A; /* Slightly lighter background */
-    border: 2px solid #FF0000; /* Red border */
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-
-.feature-item:hover {
-    transform: translateY(-5px); /* Lift the card slightly on hover */
-    box-shadow: 0 8px 12px rgba(255, 0, 0, 0.5); /* Enhance red shadow on hover */
-}
-
-.feature-item h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #FF0000; /* Red for subtitles */
-}
-
-.feature-item p {
-    font-size: 1rem;
-    color: #FFFFFF; /* White text */
-    line-height: 1.5;
-}
-
-/* Social Links */
-.social-links {
-    margin-top: 10px;
-    font-size: 1rem;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: #FF0000; /* Red text */
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
-    background-color: #330000; /* Dark red hover effect */
-    transform: scale(1.05);
-}
-
-.social-icon {
-    width: 44px;
-    height: 44px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .feature-item {
-        width: calc(50% - 1rem); /* 2 items per row for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .feature-item {
-        width: 100%; /* 1 item per row for very small screens */
-    }
-}

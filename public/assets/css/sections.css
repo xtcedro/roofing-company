@@ -271,75 +271,7 @@ h1, h2, h3 {
     box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4); /* Add shadow on hover */
 }
 
-/* Social Section */
-.social-section {
-    background: linear-gradient(135deg, #1D1E1F, #262728); /* Dark gradient */
-    color: #FFFFFF; /* White text */
-    padding: 3rem 2rem;
-    text-align: center;
-    border: 4px solid #4267B2; /* Facebook's blue border */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
-    border-radius: 15px; /* Smooth rounded corners */
-    margin: 2rem auto;
-    max-width: 900px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* Add hover effect for the entire section */
-.social-section:hover {
-    transform: scale(1.02); /* Slight zoom */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Elevated shadow */
-}
-
-/* Section Title */
-.social-section h2 {
-    font-size: 2.2rem; /* Larger, more impactful title */
-    color: #1DA1F2; /* X (Twitter) blue for titles */
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px; /* Slight spacing for a polished look */
-    font-family: 'Roboto', sans-serif; /* Clean, modern font */
-    animation: fadeIn 1s ease-out; /* Fade-in effect for the title */
-}
-
-/* Section Paragraph */
-.social-section p {
-    font-size: 1.1rem; /* Slightly larger text for readability */
-    line-height: 1.8; /* Improved line spacing */
-    margin-bottom: 1rem;
-    font-family: 'Roboto', sans-serif; /* Modern font pairing */
-    animation: fadeIn 1.5s ease-out; /* Fade-in effect for paragraphs */
-}
-
-/* Social Links */
-.social-section a {
-    color: #FFFFFF; /* White text for links */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 0.5rem 1rem; /* Added padding for a button-like feel */
-    border: 2px solid transparent; /* Transparent border */
-    border-radius: 5px; /* Rounded corners for the link */
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* Makes the link more prominent */
-    margin-top: 1rem;
-}
-
-.social-section a.x {
-    background-color: #1DA1F2; /* X (Twitter) blue background */
-    border-color: #1DA1F2; /* X (Twitter) blue border */
-}
-
-.social-section a.facebook {
-    background-color: #4267B2; /* Facebook blue background */
-    border-color: #4267B2; /* Facebook blue border */
-}
-
-.social-section a:hover {
-    color: #000000; /* Black text */
-    background-color: #FFD700; /* Gold background */
-    transform: scale(1.1); /* Slight zoom on hover */
-}
 
 /* Attention Paragraph */
 .attention-section p {

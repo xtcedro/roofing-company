@@ -95,6 +95,24 @@ h1, h2, h3 {
     color: #FF0000; /* Red for paragraphs */
 }
 
+/* Features Section */
+.features-section {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #1A1A1A; /* Dark black-gray */
+    color: #FF0000; /* Red text for titles */
+    border-top: 2px solid #FF0000; /* Subtle red line at the top */
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #FF0000; /* Red for titles */
+}
+
 /* Navbar */
 .navbar {
     display: flex;

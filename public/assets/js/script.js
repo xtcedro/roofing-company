@@ -1,11 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.getElementById('navbar');
-  navbar.innerHTML = `
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="about.html">ℹ️ About Us</a></li>
-      <li><a href="services.html">🛠️ Services</a></li>
-      <li><a href="contact.html">📞 Contact</a></li>
-    </ul>
-  `;
+import { loadHeader, loadFooter } from './load-components.js';
+import { setupNavigation } from './navigation.js';
+
+// Initialize the components and navigation bar
+document.addEventListener("DOMContentLoaded", () => {
+    loadHeader(); // Dynamically load the header
+    loadFooter(); // Dynamically load the footer
+    setupNavigation(); // Set up the navigation bar
 });

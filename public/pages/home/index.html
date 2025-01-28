@@ -1,113 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Looking for the best roofing company in Oklahoma City? Heavenly Roofing offers premium roofing services, including repairs, installations, and storm protection. Call us today!">
-    <meta name="keywords" content="roofing company, Oklahoma City roofing, roof repairs, roof installation, storm protection, local roofing experts">
-    <title>Roofing Company in Oklahoma City - Heavenly Roofing Experts 🌟</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/auth-navigation.js" defer></script>
-    <script src="../assets/js/load-components.js" defer></script>
-    <script src="../assets/js/language-selection.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Heavenly Roofing Company - Reliable and Affordable Roofing Solutions">
+  <title>Heavenly Roofing Company</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-    <!-- Language Selection Modal -->
-    <div id="language-modal" class="modal">
-        <div class="modal-content">
-            <h2>Choose Your Language 🌎</h2>
-            <div class="language-options">
-                <button class="language-button" id="english-button">
-                    <img src="assets/images/us-flag.png" alt="English" class="flag-icon">
-                    English 🇺🇸
-                </button>
-                <button class="language-button" id="spanish-button">
-                    <img src="assets/images/mx-flag.png" alt="Español" class="flag-icon">
-                    Español 🇲🇽
-                </button>
-            </div>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Heavenly Roofing Company Logo">
+    </div>
+    <nav id="navbar"></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/banner.jpg" alt="Heavenly Roofing Company Banner" class="hero-banner">
+      <h1>Welcome to Heavenly Roofing Company</h1>
+      <p>
+        We provide reliable and affordable roofing solutions tailored to your needs. Whether it's repairs, replacements, or new installations, we've got you covered.
+      </p>
+    </section>
+
+    <section class="signup-form">
+      <h2>Request a Free Estimate</h2>
+      <form id="estimateForm" action="/submit-estimate" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
         </div>
-    </div>
-
-
-    <!-- Include Header -->
-    <div id="header"></div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar"></nav>
-
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1 class="hero-title">Your #1 Roofing Company in Oklahoma City, Oklahoma 🛠️</h1>
-        <blockquote class="hero-quote">
-            🌟 "Your trusted partner in roofing solutions for homes and businesses across Oklahoma City." 🌟
-        </blockquote>
-        <button class="cta-button" onclick="location.href='services.html'">💼 Explore Our Services</button>
-        <button class="cta-button secondary" onclick="location.href='about.html'">🔍 Learn More About Us</button>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <input type="text" id="service" name="service" required>
+        </div>
+        <button type="submit" class="btn">Request Estimate</button>
+      </form>
     </section>
+  </main>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <h2>🔨 Building Trust, One Roof at a Time 🏡</h2>
-        <p>
-            🌟 At Heavenly Roofing, we’re proud to be Oklahoma City’s top choice for roofing services. Whether you need roof repairs, new installations, or storm damage assessments, we’re here to serve!
-        </p>
-        <p>
-            🏘️ From the historic charm of Midtown to the growing suburbs of Edmond and Moore, we proudly serve communities across Oklahoma City. Our dedicated team specializes in tailored roofing solutions that enhance durability, boost energy efficiency ⚡, and elevate curb appeal. 🌟
-        </p>
-        <p>
-            💪 With Heavenly Roofing, you’re not just getting a contractor—you’re gaining a trusted partner who prioritizes your satisfaction and protects what matters most: your home and family. ❤️
-        </p>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <h2>✨ Why Choose Heavenly Roofing? ✨</h2>
-        <p>
-            Heavenly Roofing isn’t just a roofing company—we’re a trusted partner committed to protecting Oklahoma City’s homes and businesses. Here’s why we’re the preferred choice for roofing solutions:
-        </p>
-        <ul>
-            <li>🏡 <strong>Local Expertise:</strong> Proudly serving Oklahoma City with in-depth knowledge of the area’s unique weather challenges. 🌪️</li>
-            <li>⚡ <strong>Top-Quality Materials:</strong> We use premium materials designed to withstand Oklahoma’s harshest conditions. 🛠️</li>
-            <li>🌟 <strong>Customer-Centric Service:</strong> Your satisfaction is our priority—we’re not happy until you are. ❤️</li>
-            <li>🚨 <strong>Emergency Support:</strong> Fast and reliable roofing solutions when you need them most. 🚒</li>
-        </ul>
-        <a href="services.html" class="cta-button">🔍 Discover Our Services</a>
-    </section>
-
-    <!-- Service Areas Section -->
-    <section class="service-areas">
-        <h2>🌎 Areas We Serve</h2>
-        <p>Heavenly Roofing proudly serves Oklahoma City and the surrounding areas, including:</p>
-        <ul>
-            <li>Midtown Oklahoma City</li>
-            <li>Downtown Oklahoma City</li>
-            <li>Edmond</li>
-            <li>Moore</li>
-            <li>Norman</li>
-            <li>Yukon</li>
-        </ul>
-    </section>
-
-
-    <!-- About Section with Register/Login -->
-    <section id="about-section" class="about-section">
-    <h2>🏠 Join the Heavenly Roofing Community 🌟</h2>
-    <p>
-        Discover why homeowners trust Heavenly Roofing for their roofing needs.
-        Create an account to request quotes, manage appointments, and stay updated
-        on our exclusive offers! Members also get exclusive access to a stunning gallery of
-        roofing images generated using Artificial Intelligence, offering inspiration for your next project.
-    </p>
-    <div class="auth-buttons">
-        <button class="cta-button" onclick="location.href='register.html'">📝 Register Now</button>
-        <button class="cta-button secondary" onclick="location.href='login.html'">🔑 Login</button>
-    </div>
-    </section>
-
-    <!-- Include Footer -->
-    <div id="footer"></div>
-
+  <footer>
+    <p>Built with ❤️ by Heavenly Roofing Company 🌟</p>
+  </footer>
 </body>
 </html>

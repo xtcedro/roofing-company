@@ -10,7 +10,7 @@ header {
 
 /* Logo */
 header .logo img {
-  max-height: 120px; /* Adjust logo size */
+  max-height: 150px; /* Adjust logo size */
   width: auto; /* Maintain aspect ratio */
 }
 

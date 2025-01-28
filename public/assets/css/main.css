@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #8B0000, #B22222, #FF6347); /* Red Gradient */
+  color: #fff; /* White text for contrast */
+  margin: 0; /* Ensures no default margin */
+}
 
 #navbar ul {
   list-style: none;
@@ -21,13 +29,7 @@
   text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #001f54; /* Dark Blue */
-  color: #fff;
-}
+
 
 .hero-banner {
   max-width: 100%;

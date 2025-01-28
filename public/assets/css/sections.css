@@ -1,3 +1,74 @@
+/* Mission Section */
+.mission {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: #8B0000; /* Dark Red Background */
+  color: #ffffff; /* White Text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700; /* Gold for heading */
+  text-shadow: 0 0 10px #FFD700; /* Glow effect */
+}
+
+.mission p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Founder Section */
+.founder {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  background-color: #8B0000; /* Dark Red Background */
+  color: #ffffff; /* White Text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.founder h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700; /* Gold for heading */
+  text-align: center;
+  text-shadow: 0 0 10px #FFD700; /* Glow effect */
+}
+
+.founder-details {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.founder-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular photo */
+  border: 3px solid #FFD700; /* Gold border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  object-fit: cover;
+}
+
+.founder-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #FFD700; /* Gold text for subheading */
+}
+
+.founder-details p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 /* Hero Section */
 .hero {
   text-align: center;

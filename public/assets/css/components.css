@@ -1,6 +1,16 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 1rem;
+  background-color: #8B0000; /* Dark Red Background */
+  height: 150px; /* Set a fixed height for the header */
+}
+
 /* Logo */
 header .logo img {
-  max-height: 150px; /* Adjust size for larger logo */
+  max-height: 120px; /* Adjust logo size */
   width: auto; /* Maintain aspect ratio */
 }
 

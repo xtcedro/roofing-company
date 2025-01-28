@@ -1,0 +1,73 @@
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #8B0000; /* Dark Red Background */
+  color: #ffffff; /* White Text */
+}
+
+.hero-banner {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ffffff; /* White Text */
+  text-shadow: 0 0 10px #FFD700; /* Gold Glow Effect */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Sales Pitch Section */
+.sales-pitch {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: #8B0000; /* Dark Red Background */
+  color: #ffffff; /* White Text */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sales-pitch h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700; /* Gold Heading */
+  text-shadow: 0 0 10px #FFD700; /* Gold Glow Effect */
+}
+
+.sales-pitch p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Call-to-Action Button */
+.sales-pitch .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #FFD700; /* Gold Button */
+  color: #8B0000; /* Dark Red Text */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sales-pitch .btn:hover {
+  background-color: #FFC107; /* Lighter Gold on Hover */
+  transform: scale(1.05); /* Slightly Larger on Hover */
+}

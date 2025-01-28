@@ -30,6 +30,15 @@ body {
 }
 
 
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #8B0000; /* Dark Red */
+  color: #fff; /* White text */
+  border-radius: 8px; /* Adds smooth edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 
 .hero-banner {
   max-width: 100%;
@@ -42,7 +51,6 @@ body {
   margin-bottom: 1rem;
   color: #fff; /* White */
   text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
-  border: 3px solid gold; /* Gold border */
   padding: 1rem;
   display: inline-block;
   animation: fadeUpGlow 3s ease-in-out;

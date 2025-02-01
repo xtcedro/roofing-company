@@ -151,12 +151,3 @@ body {
     transform: scale(1.05);
 }
 
-/* Footer */
-#footer {
-    background-color: #660000;
-    color: #FFD700;
-    text-align: center;
-    padding: 1.5rem;
-    border-top: 3px solid #FFD700;
-    box-shadow: 0 -2px 10px rgba(255, 215, 0, 0.2);
-}

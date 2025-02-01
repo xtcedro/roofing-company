@@ -1,0 +1,53 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #8B0000; /* Dark Red */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 3px solid #FFD700; /* Gold Bottom Border */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3); /* Gold Glow Effect */
+}
+
+/* Navbar Links */
+.navbar a {
+    display: inline-block;
+    color: #FFD700; /* Gold Text */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1rem;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    background-color: #FFD700; /* Gold Background */
+    color: #8B0000; /* Dark Red Text */
+    border-color: #FFD700;
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; /* Glow Effect */
+    transform: scale(1.05);
+}
+
+/* Active Link */
+.navbar a.active {
+    background-color: #FFD700;
+    color: #8B0000;
+    border-color: #FFD700;
+    box-shadow: 0 0 12px #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar a {
+        width: 90%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}

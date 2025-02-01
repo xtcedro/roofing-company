@@ -1,6 +1,13 @@
 export function setupNavigation() {
+    console.log("✅ Running setupNavigation...");
+
     const navbar = document.querySelector(".navbar");
     const header = document.querySelector("#header");
+
+    if (!navbar || !header) {
+        console.error("❌ Navbar or Header not found in the DOM!");
+        return; // Stop execution if missing
+    }
 
     // Create the menu button (logo as a clickable icon)
     const menuButton = document.createElement("button");
@@ -17,16 +24,19 @@ export function setupNavigation() {
         <a href="contact.html">📬 Contact Us</a>
     `;
 
-    // Append the button and nav links inside the header
+    // Append elements inside header
     header.appendChild(menuButton);
     header.appendChild(navLinks);
 
-    // Toggle class to show/hide navigation on click
+    console.log("✅ Navbar elements added to the header!");
+
+    // Toggle menu visibility
     menuButton.addEventListener("click", () => {
+        console.log("🟡 Menu button clicked!");
         navLinks.classList.toggle("show");
     });
 
-    // Highlight the active tab based on the current page
+    // Highlight active tab
     const currentPath = window.location.pathname.split("/").pop();
     const links = navLinks.querySelectorAll("a");
 
@@ -35,4 +45,6 @@ export function setupNavigation() {
             link.classList.add("active");
         }
     });
+
+    console.log("✅ Navigation setup complete!");
 }

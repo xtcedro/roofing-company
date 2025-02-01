@@ -26,3 +26,15 @@
         border-width: 3px;
     }
 }
+
+/* Copyright Text */
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #FFD700; /* Gold */
+    background-color: #001a3d; /* Dark Blue */
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 2px solid #FFD700; /* Gold border */
+    font-weight: bold;
+}

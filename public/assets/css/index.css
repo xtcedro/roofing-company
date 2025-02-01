@@ -84,6 +84,17 @@ body {
 }
 
 
+/* Centering the Banner */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #660000; /* Dark Red Background */
+    text-align: center;
+    border-bottom: 4px solid #FFD700; /* Gold Accent Line */
+}
+
 .hero h1 {
     font-size: 3rem;
     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;

@@ -1,0 +1,31 @@
+/* Header Styling */
+header {
+    background-color: #8B0000; /* Dark Red */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid #FFD700; /* Gold Bottom Border */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3); /* Gold Glow Effect */
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 10px #FFD700); /* Gold Glow Effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px #FFD700);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 150px;
+    }
+}

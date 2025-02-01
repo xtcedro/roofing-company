@@ -65,3 +65,47 @@
         font-size: 1rem;
     }
 }
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* View Appointments Button */
+.view-appointments {
+    background-color: #001f54; /* Dark Blue */
+    color: #FFD700; /* Gold Text */
+    border: 2px solid #FFD700; /* Gold Border */
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); /* Gold Glow Effect */
+}
+
+/* Hover Effect */
+.view-appointments:hover {
+    background-color: #FFD700; /* Gold Background */
+    color: #001f54; /* Dark Blue Text */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Stronger Glow */
+    transform: scale(1.05);
+}
+
+/* Click Effect */
+.view-appointments:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .view-appointments {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+}

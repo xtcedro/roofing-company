@@ -38,3 +38,91 @@
     border-top: 2px solid #FFD700; /* Gold border */
     font-weight: bold;
 }
+
+/* Navbar Styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7D0000; /* Dark Red */
+    padding: 1rem;
+    position: relative;
+}
+
+/* Menu Button (Logo as Hamburger) */
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 50px; /* Adjust size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.menu-button:hover .menu-icon {
+    transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #7D0000; /* Dark Red */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-links a {
+    display: block;
+    padding: 1rem;
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #990000; /* Slightly darker red */
+}
+
+/* Active Link */
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+/* Show the menu when toggled */
+.nav-links.show {
+    display: flex;
+}
+
+/* Responsive for Larger Screens */
+@media (min-width: 768px) {
+    .menu-button {
+        display: none; /* Hide menu button on larger screens */
+    }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+    }
+}

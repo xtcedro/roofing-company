@@ -49,80 +49,95 @@
     position: relative;
 }
 
-/* Menu Button (Logo as Hamburger) */
-.menu-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+/* Navbar Styles */
+.navbar {
+    background-color: #00122b; /* Darker Blue */
+    padding: 1rem 2rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3); /* Gold shadow */
+        border-bottom: 3px solid #FFD700;
+
 }
 
-.menu-icon {
-    width: 50px; /* Adjust size */
-    height: auto;
-    transition: transform 0.3s ease;
+/* Hamburger Menu */
+.hamburger-menu {
+    background-color: #FFD700; /* Gold */
+    border: none;
+    color: #00122b; /* Dark Blue */
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.menu-button:hover .menu-icon {
+/* Glow Effect on Hamburger */
+.hamburger-menu:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
 }
 
 /* Navigation Links */
 .nav-links {
-    display: none; /* Hidden by default */
-    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Navigation Links Hidden by Default (Mobile) */
+.hidden {
+    display: none;
+}
+
+/* Visible Class when Opened */
+.visible {
+    display: flex;
+    flex-direction: row;
+    background-color: #00122b; /* Darker Blue */
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     width: 100%;
-    background-color: #7D0000; /* Dark Red */
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
     padding: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Items */
+.nav-links li {
+    margin: 0;
     text-align: center;
 }
 
 .nav-links a {
-    display: block;
-    padding: 1rem;
     color: #FFD700; /* Gold */
     text-decoration: none;
+    font-size: 1rem;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover Effect */
 .nav-links a:hover {
-    background-color: #990000; /* Slightly darker red */
+    color: #FFA500; /* Brighter Gold */
+    transform: scale(1.1);
 }
 
-/* Active Link */
-.nav-links a.active {
-    text-decoration: underline;
-}
-
-/* Show the menu when toggled */
-.nav-links.show {
-    display: flex;
-}
-
-/* Responsive for Larger Screens */
-@media (min-width: 768px) {
-    .menu-button {
-        display: none; /* Hide menu button on larger screens */
-    }
-
+/* Responsive Design */
+@media (max-width: 768px) {
     .nav-links {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        width: auto;
-        background: none;
-        box-shadow: none;
-        padding: 0;
+        display: none; /* Hide links in mobile view */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .nav-links a {
-        padding: 0.5rem 1rem;
+    .visible {
+        display: flex;
     }
 }

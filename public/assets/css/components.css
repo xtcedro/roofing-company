@@ -32,7 +32,7 @@
     text-align: center;
     font-size: 0.9rem;
     color: #FFD700; /* Gold */
-    background-color: #001a3d; /* Dark Blue */
+    background-color: #7D0000; /* Dark red */
     padding: 10px;
     margin-top: 20px;
     border-top: 2px solid #FFD700; /* Gold border */
@@ -51,7 +51,7 @@
 
 /* Navbar Styles */
 .navbar {
-    background-color: #00122b; /* Darker Blue */
+    background-color: #7D0000; /* Darker Red */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -69,7 +69,7 @@
 .hamburger-menu {
     background-color: #FFD700; /* Gold */
     border: none;
-    color: #00122b; /* Dark Blue */
+    color: #7D0000; /* Dark Red */
     font-size: 1.8rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -100,7 +100,7 @@
 .visible {
     display: flex;
     flex-direction: row;
-    background-color: #00122b; /* Darker Blue */
+    background-color: #7D0000; /* Darker Red */
     position: absolute;
     top: 60px;
     left: 0;

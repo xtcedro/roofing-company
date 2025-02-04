@@ -94,7 +94,7 @@ body {
 /* Services Overview */
 .services-overview {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     background-color: #8B0000;
     opacity: 0;
     transform: translateY(30px);

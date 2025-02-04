@@ -95,7 +95,7 @@ body {
 .services-overview {
     text-align: center;
     padding: 3.5rem 1rem;
-    background-color: #013A63; /* Slightly lighter blue */
+    background-color: #8B0000; 
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s ease-out forwards 0.3s;

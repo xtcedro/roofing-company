@@ -9,6 +9,17 @@
     --text-dark: #222222;
 }
 
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
 /* Hero Section (Optimized Padding & Animation) */
 .hero {
     position: relative;
@@ -21,28 +32,6 @@
     text-align: center;
     background-color: var(--primary-color);
     color: var(--text-light);
-}
-
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-/* Hero Banner (Image) */
-.hero-banner {
-    width: 100%;
-    max-width: 1100px;
-    height: auto;
-    object-fit: cover;
-    filter: brightness(85%); /* Slightly darkened for contrast */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1.2s ease-in-out;
 }
 
 /* Hero Text Styling */
@@ -69,6 +58,18 @@ body {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards 0.7s;
+}
+
+/* Hero Banner (Image) */
+.hero-banner {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(85%); /* Slightly darkened for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 /* CTA Button */

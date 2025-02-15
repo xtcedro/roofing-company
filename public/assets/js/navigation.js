@@ -17,6 +17,7 @@ export function setupNavigation() {
                     <li><a href="about.html">🧑‍💻 About Us</a></li>
                     <li><a href="services.html">⌨️ Services</a></li>
                     <li><a href="contact.html">📬 Contact Us</a></li>
+                    <li><a href="supplementing.html">💵 Supplementing</a></li>
                 </ul>
             </div>
             <div class="overlay hidden" id="menu-overlay"></div>

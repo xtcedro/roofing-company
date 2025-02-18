@@ -7,4 +7,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHeader();
     loadFooter();
     setupNavigation(); // ✅ Initialize navigation
+    initializeChatbot(); // ✅ Initialize chatbot functionality
 });

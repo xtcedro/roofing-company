@@ -1,15 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const missionSection = document.querySelector(".mission");
+export function initAnimations() {
+    const fadeElements = document.querySelectorAll(".fade-in");
+    const hero = document.querySelector(".hero");
+    const heroBanner = document.querySelector(".hero-banner");
 
-    function handleScroll() {
-        if (missionSection) {
-            const rect = missionSection.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.9) {
-                missionSection.classList.add("visible");
+    // Intersection Observer for fade-in elements
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible", "glow-effect"); // ✅ Add glow effect
+                observer.unobserve(entry.target); // Stop observing once animated
             }
-        }
-    }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% is visible
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Ensure it triggers if already in view
-});
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Directly add animation & glow class for hero section on load
+    if (hero) hero.classList.add("visible", "glow-effect");
+    if (heroBanner) heroBanner.classList.add("visible", "glow-effect");
+}

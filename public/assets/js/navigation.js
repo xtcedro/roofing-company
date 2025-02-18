@@ -1,12 +1,15 @@
 export function setupNavigation() {
     const navbar = document.querySelector(".navbar");
 
-    // Insert HTML for the sticky navigation bar
+    // Insert HTML for the navigation bar with title and menu
     navbar.innerHTML = `
-        <div class="menu-container">
+        <div class="nav-left">
             <button class="hamburger-menu" id="menu-toggle" aria-label="Open navigation">
                 ☰
             </button>
+            <span class="nav-title">Dominguez Tech Solutions</span>
+        </div>
+        <div class="menu-container">
             <div class="sidebar hidden" id="sidebar-menu">
                 <div class="sidebar-header">
                     <h2>📌 Menu</h2>
@@ -15,10 +18,17 @@ export function setupNavigation() {
                 <ul class="nav-links">
                     <li><a href="index.html">🏠 Home</a></li>
                     <li><a href="about.html">🧑‍💻 About Us</a></li>
-                    <li><a href="supplementing.html">💵 Supplementing</a></li>
-                    <li><a href="services.html">⌨️ Services</a></li>
-                    <li><a href="contact.html">📬 Contact Us</a></li>
+                    <li><a href="hops.html">🔑 H.O.P.S. </a></li>
+                    <li><a href="crashcourse.html">📚 Crash Course</a></li>
+                    <li><a href="chatbot.html">🤖 AI Chatbot</a></li>
+                    <li><a href="services.html">🛠️ Services</a></li>
+                    <li><a href="support.html">❤️ Support</a></li>
+                    <li><a href="testimonials.html">✅ Testimonials</a></li>
+                    <li><a href="contact.html">📬 Contact</a></li>
                 </ul>
+                <div class="cta-container">
+                    <a href="appointment-booker.html" class="cta-button">🚀 Reserve Your Spot</a>
+                </div>
             </div>
             <div class="overlay hidden" id="menu-overlay"></div>
         </div>

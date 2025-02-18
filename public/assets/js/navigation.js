@@ -17,8 +17,8 @@ export function setupNavigation() {
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">🏠 Home</a></li>
-                    <li><a href="about.html">🧑‍💻 About Us</a></li>
-                    <li><a href="supplementing.html">🧑‍ Supplementing</a></li>
+                    <li><a href="about.html">🏡 About Us</a></li>
+                    <li><a href="supplementing.html">💵 Supplementing</a></li>
                     <li><a href="services.html">🛠️ Services</a></li>
                     <li><a href="contact.html">📬 Contact</a></li>
                 </ul>

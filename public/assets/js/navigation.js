@@ -7,7 +7,7 @@ export function setupNavigation() {
             <button class="hamburger-menu" id="menu-toggle" aria-label="Open navigation">
                 ☰
             </button>
-            <span class="nav-title">Dominguez Tech Solutions</span>
+            <span class="nav-title">🏡 Heavenly Roofing 🏡</span>
         </div>
         <div class="menu-container">
             <div class="sidebar hidden" id="sidebar-menu">
